@@ -19,10 +19,6 @@ namespace Lanchonete.Telas
         {
             InitializeComponent();
         }
-<<<<<<< HEAD
-=======
-
->>>>>>> 7f4a450bb4c0c6ee35b2edcb5059d1230365b922
         private void BT_Confirma_Click(object sender, EventArgs e)
         {
             Empresa empresa = new Empresa();
@@ -41,10 +37,6 @@ namespace Lanchonete.Telas
             empresa.Telefone = msk_telefone.Text;
             empresa.Whatsapp = msk_whatsapp.Text;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 7f4a450bb4c0c6ee35b2edcb5059d1230365b922
             empresa.GravaBanco(empresa.Razao);
             empresa.GravaBanco(empresa.Fantasia);
             empresa.GravaBanco(empresa.Cnpj);
@@ -59,10 +51,6 @@ namespace Lanchonete.Telas
             empresa.GravaBanco(empresa.Telefone);
             empresa.GravaBanco(empresa.Whatsapp);
         }
-<<<<<<< HEAD
-=======
-
->>>>>>> 7f4a450bb4c0c6ee35b2edcb5059d1230365b922
         private void F_CadEmpresas_Load(object sender, EventArgs e)
         {
             string cmdSql = "SELECT * FROM empresa WHERE ctrl = 1";
@@ -92,25 +80,18 @@ namespace Lanchonete.Telas
                 tb_inscEsta.Text = linhaDados["nomers"].ToString();
                 tb_endereco.Text = linhaDados["nomers"].ToString();
                 tb_bairro.Text = linhaDados["nomers"].ToString();
-<<<<<<< HEAD
                 msk_cep.Text = linhaDados["nomers"].ToString();
                 msk_telefone.Text = linhaDados["nomers"].ToString();
                 msk_whatsapp.Text = linhaDados["nomers"].ToString();
-=======
-               // msk_cep.Text = linhaDados["nomers"].ToString();
-              //  msk_telefone.Text = linhaDados["nomers"].ToString();
-              //  msk_whatsapp.Text = linhaDados["nomers"].ToString();
->>>>>>> 7f4a450bb4c0c6ee35b2edcb5059d1230365b922
+                msk_cep.Text = linhaDados["nomers"].ToString();
+                msk_telefone.Text = linhaDados["nomers"].ToString();
+                msk_whatsapp.Text = linhaDados["nomers"].ToString();
                 tb_email.Text = linhaDados["nomers"].ToString();
                 tb_num.Text = linhaDados["nomers"].ToString();
                 tb_cidade.Text = linhaDados["nomers"].ToString();
                 tb_complemento.Text = linhaDados["nomers"].ToString();
             }           
         }
-<<<<<<< HEAD
-=======
-
->>>>>>> 7f4a450bb4c0c6ee35b2edcb5059d1230365b922
         private void bt_cep_Click(object sender, EventArgs e)
         {
             //consulta no site dos correios//
@@ -132,16 +113,9 @@ namespace Lanchonete.Telas
             else
             {
                 MessageBox.Show("CEP invalido ou campo esta vazio," +
-<<<<<<< HEAD
                     " por favor Preencher o campo");
             }
         }
-=======
-                    "por favor Preencher o campo");
-            }
-        }
-
->>>>>>> 7f4a450bb4c0c6ee35b2edcb5059d1230365b922
         private void bt_cancelar_Click(object sender, EventArgs e)
         {
             this.Close();
