@@ -53,9 +53,6 @@ namespace Lanchonete.Telas
         }
         private void F_CadEmpresas_Load(object sender, EventArgs e)
         {
-            string cmdSql = "SELECT * FROM empresa WHERE ctrl = 1";
-            var dadosS = Program.cx.ExecutaSql(cmdSql);
-
             TB_Razao.Text = string.Empty;
             tb_fantasia.Text = string.Empty;
             msk_cnpj.Text = string.Empty;
@@ -69,6 +66,9 @@ namespace Lanchonete.Telas
             tb_num.Text = string.Empty;
             tb_cidade.Text = string.Empty;
             tb_complemento.Text = string.Empty;
+
+            string cmdSql = "SELECT * FROM empresa WHERE ctrl = 1";
+            var dadosS = Program.cx.ExecutaSql(cmdSql);
 
             if ((dadosS != null) || (dadosS.Rows.Count != 0))
             {
