@@ -113,7 +113,11 @@ namespace Lanchonete.Telas
             this.Controls.Add(this.BT_Cancelar);
             this.Controls.Add(this.TX_Usuario);
             this.Controls.Add(this.Usuário);
+<<<<<<< HEAD
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+=======
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+>>>>>>> 7f4a450bb4c0c6ee35b2edcb5059d1230365b922
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "F_Login";

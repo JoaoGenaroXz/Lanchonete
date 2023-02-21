@@ -20,22 +20,22 @@ namespace Lanchonete.Telas
         
     private void BT_Confirma_Click(object sender, EventArgs e)
     {
-            Usuario login = new Usuario();
-            login.Nome = TX_Usuario.Text;
-            login.Senha = TX_Senha.Text;
+        Usuario login = new Usuario();
+        login.Nome = TX_Usuario.Text;
+        login.Senha = TX_Senha.Text;
             
-            if (login.Autenticar(login.Nome, login.Senha))
-            {
-                this.DialogResult = DialogResult.Yes;
-            }
-            else
-            {
-                MessageBox.Show("Usuario ou senha incoreto");
-            }
+        if (login.Autenticar(login.Nome, login.Senha))
+        {
+            this.DialogResult = DialogResult.Yes;
+        }
+        else
+        {
+            MessageBox.Show("Usuario ou senha incoreto");
+        }
     }
     private void BT_Cancelar_Click(object sender, EventArgs e)
     {
-         this.Close();
+        this.Close();
     }
   }
 }

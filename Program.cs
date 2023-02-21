@@ -13,7 +13,8 @@ namespace Lanchonete
 {
   static class Program
   {
-      public static Conexao cx = new Conexao("localhost", "5432", "Lanchonete", "postgres", "root");
+
+       public static Conexao cx = new Conexao("localhost", "5432", "Lanchonete", "postgres", "root");
 
       /// <summary>
       /// Ponto de entrada principal para o aplicativo.
@@ -29,10 +30,10 @@ namespace Lanchonete
               //criando as tabelas
               string cmdSql = "CREATE TABLE IF NOT EXISTS usuario(codigo SERIAL PRIMARY KEY)";
               var dados = Program.cx.ExecutaSql(cmdSql);
-      
+                
               string cmdSqlS = "SELECT nomeuser FROM usuario WHERE nomeuser = 'teste'";
               var dadosS = Program.cx.ExecutaSql(cmdSqlS);
-              
+
               Atualizacao local = new Atualizacao();
               local.Path = (@"D:\Atualização\");
               local.Atualiza(local.Path);
@@ -50,7 +51,6 @@ namespace Lanchonete
               else
               {
                   var dadosI = Program.cx.ComandoSql("INSERT INTO usuario(nomeuser,senhauser) VALUES ('teste', 'teste')");
-                  
                   F_Login login = new F_Login();
                   DialogResult resultado = login.ShowDialog();
 
@@ -59,7 +59,7 @@ namespace Lanchonete
                       Application.Run(new F_Principal());
                   }
               }
-            }
+          }
           else
           {
               MessageBox.Show(
