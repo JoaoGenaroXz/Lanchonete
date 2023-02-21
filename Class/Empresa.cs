@@ -103,14 +103,16 @@ namespace Lanchonete.Class
             if (dadosS != null)
             {
                 //atualizar tabela
-                string cmdSqlU = "UPDATE empresa SET nomers = '"+ Razao +"' WHERE ctrl = 1";
+                string cmdSqlU = "UPDATE empresa SET razao = '"+ Razao +"', fantasia = '"+ Fantasia + "', cnpj = '"+ Cnpj + "', inscesta = '"+ InscricaoEstadual +"' " +
+                    ", endereco = '"+ Endereco + "', bairro = '"+ Bairro + "', cep = '"+ Cep + "', cidade = '"+ Cidade + "', complemento = '"+ Complemento +"' " +
+                    ", telefone = '"+ Telefone + "', whatsapp = '"+ Whatsapp + "', email = '"+ Email +"' WHERE ctrl = 1";
                 var dadosU = Program.cx.ExecutaSql(cmdSqlU);
             }
             else
             {
                 //gravando no banco
-                string cmdSqlI = "INSERT INTO empresa (nomers, nomefantasia, cnpjcpf, endereco, bairro, cep, cidade, complemento, telefone, celular, email) values" +
-                     "('" + Razao + "','" + Fantasia + "','" + Cnpj + "','" + Endereco + Num + "','" + Bairro + "'," +
+                string cmdSqlI = "INSERT INTO empresa (razao, fantasia, cnpj, inscesta, endereco, bairro, cep, cidade, complemento, telefone, whatsapp, email) values" +
+                     "('" + Razao + "','" + Fantasia + "','" + Cnpj + "','" + InscricaoEstadual + "','" + Endereco + Num + "','" + Bairro + "'," +
                      "'" + Cep + "','" + Cidade + "','" + Complemento + "','" + Telefone + "','" + Whatsapp + "','" + Email + "')";
                 var dadosI = Program.cx.ExecutaSql(cmdSqlI);
             }

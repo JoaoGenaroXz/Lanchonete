@@ -74,22 +74,19 @@ namespace Lanchonete.Telas
             {
                 DataRow linhaDados = dadosS.Rows[0];
 
-                TB_Razao.Text = linhaDados["nomers"].ToString();
-                tb_fantasia.Text = linhaDados["nomers"].ToString();
-                msk_cnpj.Text = linhaDados["nomers"].ToString();
-                tb_inscEsta.Text = linhaDados["nomers"].ToString();
-                tb_endereco.Text = linhaDados["nomers"].ToString();
-                tb_bairro.Text = linhaDados["nomers"].ToString();
-                msk_cep.Text = linhaDados["nomers"].ToString();
-                msk_telefone.Text = linhaDados["nomers"].ToString();
-                msk_whatsapp.Text = linhaDados["nomers"].ToString();
-                msk_cep.Text = linhaDados["nomers"].ToString();
-                msk_telefone.Text = linhaDados["nomers"].ToString();
-                msk_whatsapp.Text = linhaDados["nomers"].ToString();
-                tb_email.Text = linhaDados["nomers"].ToString();
-                tb_num.Text = linhaDados["nomers"].ToString();
-                tb_cidade.Text = linhaDados["nomers"].ToString();
-                tb_complemento.Text = linhaDados["nomers"].ToString();
+                TB_Razao.Text = linhaDados["razao"].ToString();
+                tb_fantasia.Text = linhaDados["fantasia"].ToString();
+                msk_cnpj.Text = linhaDados["cnpj"].ToString();
+                tb_inscEsta.Text = linhaDados["inscesta"].ToString();
+                tb_endereco.Text = linhaDados["endereco"].ToString();
+                tb_bairro.Text = linhaDados["bairro"].ToString();
+                msk_cep.Text = linhaDados["cep"].ToString();
+                msk_telefone.Text = linhaDados["telefone"].ToString();
+                msk_whatsapp.Text = linhaDados["whatsapp"].ToString();
+                tb_email.Text = linhaDados["email"].ToString();
+               //tb_num.Text = linhaDados["nomers"].ToString();
+                tb_cidade.Text = linhaDados["cidade"].ToString();
+                tb_complemento.Text = linhaDados["complemento"].ToString();
             }           
         }
         private void bt_cep_Click(object sender, EventArgs e)
