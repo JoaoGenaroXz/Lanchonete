@@ -252,6 +252,7 @@ namespace Lanchonete
             this.Controls.Add(this.PanelMenu);
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "F_Principal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
             this.Load += new System.EventHandler(this.F_Principal_Load);
             this.PanelMenu.ResumeLayout(false);

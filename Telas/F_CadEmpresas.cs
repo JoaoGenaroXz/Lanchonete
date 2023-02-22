@@ -90,11 +90,19 @@ namespace Lanchonete.Telas
             if(!string.IsNullOrEmpty(empresa.Cep))
             {
                 string end = consulta.ConsultaCep(empresa.Cep);
-                string[] texto = end.Split(',');// efetua a quebra do vetor de string//
-                tb_endereco.Text = texto[0].Trim();// trim tira os espaco em branco
-                tb_bairro.Text = texto[1].Trim();
-                tb_cidade.Text = texto[2].Trim();
-                msk_cep.Text = texto[3].Trim();
+                if(end.Contains("Invalido"))
+                {
+                    string[] texto = end.Split(',');// efetua a quebra do vetor de string//
+                    tb_endereco.Text = texto[0].Trim();// trim tira os espaco em branco
+                    tb_bairro.Text = texto[1].Trim();
+                    tb_cidade.Text = texto[2].Trim();
+                    msk_cep.Text = texto[3].Trim();
+                }
+                else
+                {
+                    MessageBox.Show("CEP invalido ou campo esta vazio," +
+                    " por favor Preencher o campo");
+                }
             }
             else
             {
