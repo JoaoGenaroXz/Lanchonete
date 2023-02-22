@@ -171,7 +171,7 @@ namespace Lanchonete.Telas
             this.msk_cnpj.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.msk_cnpj.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.msk_cnpj.Location = new System.Drawing.Point(191, 148);
-            this.msk_cnpj.Mask = "##.###.###/####-##";
+            this.msk_cnpj.Mask = "##,###,###/####-##";
             this.msk_cnpj.Name = "msk_cnpj";
             this.msk_cnpj.Size = new System.Drawing.Size(263, 24);
             this.msk_cnpj.TabIndex = 24;
@@ -290,7 +290,7 @@ namespace Lanchonete.Telas
             this.msk_telefone.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.msk_telefone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.msk_telefone.Location = new System.Drawing.Point(487, 292);
-            this.msk_telefone.Mask = "(00) 0000-0000";
+            this.msk_telefone.Mask = "(##) ####-####";
             this.msk_telefone.Name = "msk_telefone";
             this.msk_telefone.Size = new System.Drawing.Size(133, 24);
             this.msk_telefone.TabIndex = 36;
@@ -311,7 +311,7 @@ namespace Lanchonete.Telas
             this.msk_whatsapp.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.msk_whatsapp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.msk_whatsapp.Location = new System.Drawing.Point(758, 295);
-            this.msk_whatsapp.Mask = "(00) 00000-0000";
+            this.msk_whatsapp.Mask = "(##) #####-####";
             this.msk_whatsapp.Name = "msk_whatsapp";
             this.msk_whatsapp.Size = new System.Drawing.Size(133, 24);
             this.msk_whatsapp.TabIndex = 38;

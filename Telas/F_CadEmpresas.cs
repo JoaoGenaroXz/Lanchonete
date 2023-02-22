@@ -36,20 +36,9 @@ namespace Lanchonete.Telas
             empresa.Complemento = tb_complemento.Text;
             empresa.Telefone = msk_telefone.Text;
             empresa.Whatsapp = msk_whatsapp.Text;
-
-            empresa.GravaBanco(empresa.Razao);
-            empresa.GravaBanco(empresa.Fantasia);
-            empresa.GravaBanco(empresa.Cnpj);
-            empresa.GravaBanco(empresa.InscricaoEstadual);
-            empresa.GravaBanco(empresa.Endereco);
-            empresa.GravaBanco(empresa.Num);
-            empresa.GravaBanco(empresa.Cep);
-            empresa.GravaBanco(empresa.Bairro);
-            empresa.GravaBanco(empresa.Cidade);
-            empresa.GravaBanco(empresa.Complemento);
-            empresa.GravaBanco(empresa.Email);
-            empresa.GravaBanco(empresa.Telefone);
-            empresa.GravaBanco(empresa.Whatsapp);
+            
+            empresa.GravaBanco();
+           
         }
         private void F_CadEmpresas_Load(object sender, EventArgs e)
         {
@@ -70,7 +59,7 @@ namespace Lanchonete.Telas
             string cmdSql = "SELECT * FROM empresa WHERE ctrl = 1";
             var dadosS = Program.cx.ExecutaSql(cmdSql);
 
-            if ((dadosS != null) || (dadosS.Rows.Count != 0))
+            if ((dadosS != null))
             {
                 DataRow linhaDados = dadosS.Rows[0];
 
@@ -84,7 +73,7 @@ namespace Lanchonete.Telas
                 msk_telefone.Text = linhaDados["telefone"].ToString();
                 msk_whatsapp.Text = linhaDados["whatsapp"].ToString();
                 tb_email.Text = linhaDados["email"].ToString();
-               //tb_num.Text = linhaDados["nomers"].ToString();
+                tb_num.Text = linhaDados["endnum"].ToString();
                 tb_cidade.Text = linhaDados["cidade"].ToString();
                 tb_complemento.Text = linhaDados["complemento"].ToString();
             }           

@@ -8,6 +8,7 @@ namespace Lanchonete.Class
 {
     class Empresa
     {
+        
         private string razao;
         private string fantasia;
         private string cnpj;
@@ -95,7 +96,7 @@ namespace Lanchonete.Class
             set { this.cidade = value; }
             get { return this.cidade; }
         }
-        public void GravaBanco(string Empresa)
+        public void GravaBanco()
         {
             string cmdSql = "SELECT * FROM empresa";
             var dadosS = Program.cx.ExecutaSql(cmdSql);
@@ -104,15 +105,15 @@ namespace Lanchonete.Class
             {
                 //atualizar tabela
                 string cmdSqlU = "UPDATE empresa SET razao = '"+ Razao +"', fantasia = '"+ Fantasia + "', cnpj = '"+ Cnpj + "', inscesta = '"+ InscricaoEstadual +"' " +
-                    ", endereco = '"+ Endereco + "', bairro = '"+ Bairro + "', cep = '"+ Cep + "', cidade = '"+ Cidade + "', complemento = '"+ Complemento +"' " +
+                    ", endereco = '"+ Endereco + "', endnum = '"+ Num + "', bairro = '" + Bairro + "', cep = '"+ Cep + "', cidade = '"+ Cidade + "', complemento = '"+ Complemento +"' " +
                     ", telefone = '"+ Telefone + "', whatsapp = '"+ Whatsapp + "', email = '"+ Email +"' WHERE ctrl = 1";
                 var dadosU = Program.cx.ExecutaSql(cmdSqlU);
             }
             else
             {
                 //gravando no banco
-                string cmdSqlI = "INSERT INTO empresa (razao, fantasia, cnpj, inscesta, endereco, bairro, cep, cidade, complemento, telefone, whatsapp, email) values" +
-                     "('" + Razao + "','" + Fantasia + "','" + Cnpj + "','" + InscricaoEstadual + "','" + Endereco + Num + "','" + Bairro + "'," +
+                string cmdSqlI = "INSERT INTO empresa (razao, fantasia, cnpj, inscesta, endereco, endnum, bairro, cep, cidade, complemento, telefone, whatsapp, email) values" +
+                     "('" + Razao + "','" + Fantasia + "','" + Cnpj + "','" + InscricaoEstadual + "','" + Endereco + "','" + Num + "','" + Bairro + "'," +
                      "'" + Cep + "','" + Cidade + "','" + Complemento + "','" + Telefone + "','" + Whatsapp + "','" + Email + "')";
                 var dadosI = Program.cx.ExecutaSql(cmdSqlI);
             }
