@@ -100,8 +100,7 @@ namespace Lanchonete.Telas
                 }
                 else
                 {
-                    MessageBox.Show("CEP invalido ou campo esta vazio," +
-                    " por favor Preencher o campo");
+                    MessageBox.Show("CEP invalido, por favor informe um CEP valido");
                 }
             }
             else

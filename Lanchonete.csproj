@@ -173,6 +173,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\Atualizacao.cs" />
+    <Compile Include="Class\Clientes.cs" />
     <Compile Include="Class\Conexao.cs" />
     <Compile Include="Class\CorreioService.cs" />
     <Compile Include="Class\Empresa.cs" />
@@ -190,6 +191,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Telas\f_CadClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\f_CadClientes.Designer.cs">
+      <DependentUpon>f_CadClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\F_CadEmpresas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,6 +221,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Telas\f_CadClientes.resx">
+      <DependentUpon>f_CadClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Telas\F_CadEmpresas.resx">
       <DependentUpon>F_CadEmpresas.cs</DependentUpon>
     </EmbeddedResource>
@@ -400,9 +410,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Telas\cadastro\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
