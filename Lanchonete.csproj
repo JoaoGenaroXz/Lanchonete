@@ -191,11 +191,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Telas\f_CadClientes.cs">
+    <Compile Include="Telas\F_CadClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\f_CadClientes.Designer.cs">
-      <DependentUpon>f_CadClientes.cs</DependentUpon>
+    <Compile Include="Telas\F_CadClientes.Designer.cs">
+      <DependentUpon>F_CadClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="Telas\F_CadEmpresas.cs">
       <SubType>Form</SubType>
@@ -221,8 +221,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Telas\f_CadClientes.resx">
-      <DependentUpon>f_CadClientes.cs</DependentUpon>
+    <EmbeddedResource Include="Telas\F_CadClientes.resx">
+      <DependentUpon>F_CadClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\F_CadEmpresas.resx">
       <DependentUpon>F_CadEmpresas.cs</DependentUpon>

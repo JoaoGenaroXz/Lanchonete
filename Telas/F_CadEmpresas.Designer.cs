@@ -119,7 +119,7 @@ namespace Lanchonete.Telas
             // 
             this.lb_telefone.AutoSize = true;
             this.lb_telefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_telefone.Location = new System.Drawing.Point(414, 296);
+            this.lb_telefone.Location = new System.Drawing.Point(414, 295);
             this.lb_telefone.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lb_telefone.Name = "lb_telefone";
             this.lb_telefone.Size = new System.Drawing.Size(65, 18);
@@ -180,7 +180,7 @@ namespace Lanchonete.Telas
             // 
             this.lb_inscEst.AutoSize = true;
             this.lb_inscEst.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_inscEst.Location = new System.Drawing.Point(520, 154);
+            this.lb_inscEst.Location = new System.Drawing.Point(520, 152);
             this.lb_inscEst.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lb_inscEst.Name = "lb_inscEst";
             this.lb_inscEst.Size = new System.Drawing.Size(100, 18);
@@ -191,7 +191,7 @@ namespace Lanchonete.Telas
             // 
             this.tb_inscEsta.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.tb_inscEsta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tb_inscEsta.Location = new System.Drawing.Point(628, 150);
+            this.tb_inscEsta.Location = new System.Drawing.Point(628, 148);
             this.tb_inscEsta.Name = "tb_inscEsta";
             this.tb_inscEsta.Size = new System.Drawing.Size(263, 24);
             this.tb_inscEsta.TabIndex = 26;
@@ -249,7 +249,7 @@ namespace Lanchonete.Telas
             // 
             this.lb_cidade.AutoSize = true;
             this.lb_cidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_cidade.Location = new System.Drawing.Point(538, 227);
+            this.lb_cidade.Location = new System.Drawing.Point(538, 228);
             this.lb_cidade.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lb_cidade.Name = "lb_cidade";
             this.lb_cidade.Size = new System.Drawing.Size(54, 18);
@@ -270,7 +270,7 @@ namespace Lanchonete.Telas
             // 
             this.tb_cidade.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.tb_cidade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tb_cidade.Location = new System.Drawing.Point(600, 224);
+            this.tb_cidade.Location = new System.Drawing.Point(600, 225);
             this.tb_cidade.Name = "tb_cidade";
             this.tb_cidade.Size = new System.Drawing.Size(291, 24);
             this.tb_cidade.TabIndex = 34;
@@ -289,7 +289,7 @@ namespace Lanchonete.Telas
             // 
             this.msk_telefone.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.msk_telefone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.msk_telefone.Location = new System.Drawing.Point(487, 292);
+            this.msk_telefone.Location = new System.Drawing.Point(487, 291);
             this.msk_telefone.Mask = "(##) ####-####";
             this.msk_telefone.Name = "msk_telefone";
             this.msk_telefone.Size = new System.Drawing.Size(133, 24);
@@ -299,7 +299,7 @@ namespace Lanchonete.Telas
             // 
             this.lb_whats.AutoSize = true;
             this.lb_whats.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_whats.Location = new System.Drawing.Point(681, 299);
+            this.lb_whats.Location = new System.Drawing.Point(681, 296);
             this.lb_whats.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lb_whats.Name = "lb_whats";
             this.lb_whats.Size = new System.Drawing.Size(75, 18);
@@ -310,7 +310,7 @@ namespace Lanchonete.Telas
             // 
             this.msk_whatsapp.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.msk_whatsapp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.msk_whatsapp.Location = new System.Drawing.Point(758, 295);
+            this.msk_whatsapp.Location = new System.Drawing.Point(758, 292);
             this.msk_whatsapp.Mask = "(##) #####-####";
             this.msk_whatsapp.Name = "msk_whatsapp";
             this.msk_whatsapp.Size = new System.Drawing.Size(133, 24);
@@ -362,7 +362,7 @@ namespace Lanchonete.Telas
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(958, 476);
+            this.ClientSize = new System.Drawing.Size(937, 452);
             this.Controls.Add(this.tb_complemento);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.bt_cancelar);
@@ -393,7 +393,6 @@ namespace Lanchonete.Telas
             this.Controls.Add(this.lb_fantasia);
             this.Controls.Add(this.lb_razao);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "F_CadEmpresas";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;

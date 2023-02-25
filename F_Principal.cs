@@ -15,6 +15,7 @@ namespace Lanchonete
 {
   public partial class F_Principal : Form
   {
+
         Thread Principal;
 
     public F_Principal()
@@ -81,5 +82,15 @@ namespace Lanchonete
     {
             Application.Run(new F_CadEmpresas());
     }
+    private void AbrirCadClientes(object obj)
+    {
+           Application.Run(new F_CadClientes());
     }
+    private void bt_clientes_Click(object sender, EventArgs e)
+    {
+           Principal = new Thread(AbrirCadClientes);
+           Principal.SetApartmentState(ApartmentState.STA);
+           Principal.Start();
+    }
+  }
 }
