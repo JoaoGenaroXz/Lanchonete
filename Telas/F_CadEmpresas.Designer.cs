@@ -130,7 +130,7 @@ namespace Lanchonete.Telas
             // 
             this.lb_email.AutoSize = true;
             this.lb_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_email.Location = new System.Drawing.Point(133, 330);
+            this.lb_email.Location = new System.Drawing.Point(133, 326);
             this.lb_email.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lb_email.Name = "lb_email";
             this.lb_email.Size = new System.Drawing.Size(50, 18);
@@ -320,7 +320,7 @@ namespace Lanchonete.Telas
             // 
             this.tb_email.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.tb_email.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tb_email.Location = new System.Drawing.Point(192, 329);
+            this.tb_email.Location = new System.Drawing.Point(192, 325);
             this.tb_email.Name = "tb_email";
             this.tb_email.Size = new System.Drawing.Size(700, 24);
             this.tb_email.TabIndex = 39;
