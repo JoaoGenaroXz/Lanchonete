@@ -90,7 +90,7 @@ namespace Lanchonete.Telas
             if(!string.IsNullOrEmpty(empresa.Cep))
             {
                 string end = consulta.ConsultaCep(empresa.Cep);
-                if(end.Contains("Invalido"))
+                if(!end.Contains("Invalido"))
                 {
                     string[] texto = end.Split(',');// efetua a quebra do vetor de string//
                     tb_endereco.Text = texto[0].Trim();// trim tira os espaco em branco

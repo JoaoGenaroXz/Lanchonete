@@ -178,6 +178,7 @@
     <Compile Include="Class\CorreioService.cs" />
     <Compile Include="Class\Empresa.cs" />
     <Compile Include="Class\Usuario.cs" />
+    <Compile Include="Class\ClienteDAO.cs" />
     <Compile Include="Connected Services\WSCorreios\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

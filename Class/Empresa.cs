@@ -101,7 +101,7 @@ namespace Lanchonete.Class
             string cmdSql = "SELECT * FROM empresa";
             var dadosS = Program.cx.ExecutaSql(cmdSql);
 
-            if (dadosS != null)
+            if(dadosS != null)
             {
                 //atualizar tabela
                 string cmdSqlU = "UPDATE empresa SET razao = '"+ Razao +"', fantasia = '"+ Fantasia + "', cnpj = '"+ Cnpj + "', inscesta = '"+ InscricaoEstadual +"' " +

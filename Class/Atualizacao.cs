@@ -12,9 +12,6 @@ namespace Lanchonete.Class
     {
         private string path;
         private string msgErro;
-        string linha;
-        string[] arquivo;
-        
 
         public string Path
         {
@@ -28,31 +25,28 @@ namespace Lanchonete.Class
         }
         public void Atualiza(string Path)
         {
-            
-            if (Directory.Exists(Path))
+            try
             {
-                try
+                if (Directory.Exists(Path))
                 {
-                    arquivo = Directory.GetFiles(Path, "*.SQL");
-                    for (int a = 0; a < arquivo.Length; a++)
+                    string[] arquivos = Directory.GetFiles(Path, "*.SQL");
+                    foreach (string arquivo in arquivos)
                     {
-                        while (arquivo.Length != -1)
+                        using (StreamReader lendo = new StreamReader(arquivo))
                         {
-                            StreamReader lendo = new StreamReader(arquivo[a]);
-                            while (linha != "exist")
+                            string linha;
+                            while ((linha = lendo.ReadLine()) != null)
                             {
-                                linha = lendo.ReadLine();
-                                var dadosI = Program.cx.ExecutaSql(linha);
+                                Program.cx.ExecutaSql(linha);
                             }
-                            lendo.Close();
-                            File.Delete(arquivo[a]);
                         }
+                        File.Delete(arquivo);
                     }
                 }
-                catch( Exception erro)
-                {
-                    this.MsgErro = erro.Message.ToString();
-                }
+            }
+            catch (Exception erro)
+            {
+                this.MsgErro = erro.Message.ToString();
             }
         }
     }

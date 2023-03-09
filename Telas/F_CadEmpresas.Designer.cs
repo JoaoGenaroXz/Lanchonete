@@ -143,7 +143,7 @@ namespace Lanchonete.Telas
             this.bt_confirma.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.bt_confirma.Name = "bt_confirma";
             this.bt_confirma.Size = new System.Drawing.Size(107, 37);
-            this.bt_confirma.TabIndex = 22;
+            this.bt_confirma.TabIndex = 15;
             this.bt_confirma.Text = "Confirmar";
             this.bt_confirma.UseVisualStyleBackColor = true;
             this.bt_confirma.Click += new System.EventHandler(this.BT_Confirma_Click);
@@ -164,7 +164,7 @@ namespace Lanchonete.Telas
             this.tb_fantasia.Location = new System.Drawing.Point(191, 113);
             this.tb_fantasia.Name = "tb_fantasia";
             this.tb_fantasia.Size = new System.Drawing.Size(700, 24);
-            this.tb_fantasia.TabIndex = 23;
+            this.tb_fantasia.TabIndex = 2;
             // 
             // msk_cnpj
             // 
@@ -174,7 +174,7 @@ namespace Lanchonete.Telas
             this.msk_cnpj.Mask = "##,###,###/####-##";
             this.msk_cnpj.Name = "msk_cnpj";
             this.msk_cnpj.Size = new System.Drawing.Size(263, 24);
-            this.msk_cnpj.TabIndex = 24;
+            this.msk_cnpj.TabIndex = 3;
             // 
             // lb_inscEst
             // 
@@ -194,7 +194,7 @@ namespace Lanchonete.Telas
             this.tb_inscEsta.Location = new System.Drawing.Point(628, 148);
             this.tb_inscEsta.Name = "tb_inscEsta";
             this.tb_inscEsta.Size = new System.Drawing.Size(263, 24);
-            this.tb_inscEsta.TabIndex = 26;
+            this.tb_inscEsta.TabIndex = 4;
             // 
             // tb_endereco
             // 
@@ -203,7 +203,7 @@ namespace Lanchonete.Telas
             this.tb_endereco.Location = new System.Drawing.Point(191, 189);
             this.tb_endereco.Name = "tb_endereco";
             this.tb_endereco.Size = new System.Drawing.Size(517, 24);
-            this.tb_endereco.TabIndex = 27;
+            this.tb_endereco.TabIndex = 5;
             // 
             // tb_num
             // 
@@ -212,7 +212,7 @@ namespace Lanchonete.Telas
             this.tb_num.Location = new System.Drawing.Point(812, 189);
             this.tb_num.Name = "tb_num";
             this.tb_num.Size = new System.Drawing.Size(80, 24);
-            this.tb_num.TabIndex = 28;
+            this.tb_num.TabIndex = 6;
             // 
             // lb_num
             // 
@@ -232,7 +232,7 @@ namespace Lanchonete.Telas
             this.tb_bairro.Location = new System.Drawing.Point(192, 226);
             this.tb_bairro.Name = "tb_bairro";
             this.tb_bairro.Size = new System.Drawing.Size(319, 24);
-            this.tb_bairro.TabIndex = 30;
+            this.tb_bairro.TabIndex = 7;
             // 
             // lb_cep
             // 
@@ -264,7 +264,7 @@ namespace Lanchonete.Telas
             this.msk_cep.Mask = "#####-###";
             this.msk_cep.Name = "msk_cep";
             this.msk_cep.Size = new System.Drawing.Size(130, 24);
-            this.msk_cep.TabIndex = 33;
+            this.msk_cep.TabIndex = 10;
             // 
             // tb_cidade
             // 
@@ -273,14 +273,14 @@ namespace Lanchonete.Telas
             this.tb_cidade.Location = new System.Drawing.Point(600, 225);
             this.tb_cidade.Name = "tb_cidade";
             this.tb_cidade.Size = new System.Drawing.Size(291, 24);
-            this.tb_cidade.TabIndex = 34;
+            this.tb_cidade.TabIndex = 8;
             // 
             // bt_cep
             // 
             this.bt_cep.Location = new System.Drawing.Point(327, 290);
             this.bt_cep.Name = "bt_cep";
             this.bt_cep.Size = new System.Drawing.Size(52, 25);
-            this.bt_cep.TabIndex = 35;
+            this.bt_cep.TabIndex = 11;
             this.bt_cep.Text = "CEP";
             this.bt_cep.UseVisualStyleBackColor = true;
             this.bt_cep.Click += new System.EventHandler(this.bt_cep_Click);
@@ -293,7 +293,7 @@ namespace Lanchonete.Telas
             this.msk_telefone.Mask = "(##) ####-####";
             this.msk_telefone.Name = "msk_telefone";
             this.msk_telefone.Size = new System.Drawing.Size(133, 24);
-            this.msk_telefone.TabIndex = 36;
+            this.msk_telefone.TabIndex = 12;
             // 
             // lb_whats
             // 
@@ -314,7 +314,7 @@ namespace Lanchonete.Telas
             this.msk_whatsapp.Mask = "(##) #####-####";
             this.msk_whatsapp.Name = "msk_whatsapp";
             this.msk_whatsapp.Size = new System.Drawing.Size(133, 24);
-            this.msk_whatsapp.TabIndex = 38;
+            this.msk_whatsapp.TabIndex = 13;
             // 
             // tb_email
             // 
@@ -323,7 +323,7 @@ namespace Lanchonete.Telas
             this.tb_email.Location = new System.Drawing.Point(192, 325);
             this.tb_email.Name = "tb_email";
             this.tb_email.Size = new System.Drawing.Size(700, 24);
-            this.tb_email.TabIndex = 39;
+            this.tb_email.TabIndex = 14;
             // 
             // bt_cancelar
             // 
@@ -332,7 +332,7 @@ namespace Lanchonete.Telas
             this.bt_cancelar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.bt_cancelar.Name = "bt_cancelar";
             this.bt_cancelar.Size = new System.Drawing.Size(108, 37);
-            this.bt_cancelar.TabIndex = 40;
+            this.bt_cancelar.TabIndex = 16;
             this.bt_cancelar.Text = "Cancelar";
             this.bt_cancelar.UseVisualStyleBackColor = false;
             this.bt_cancelar.Click += new System.EventHandler(this.bt_cancelar_Click);
@@ -355,7 +355,7 @@ namespace Lanchonete.Telas
             this.tb_complemento.Location = new System.Drawing.Point(192, 258);
             this.tb_complemento.Name = "tb_complemento";
             this.tb_complemento.Size = new System.Drawing.Size(699, 24);
-            this.tb_complemento.TabIndex = 42;
+            this.tb_complemento.TabIndex = 9;
             // 
             // F_CadEmpresas
             // 
@@ -394,6 +394,8 @@ namespace Lanchonete.Telas
             this.Controls.Add(this.lb_razao);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "F_CadEmpresas";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
