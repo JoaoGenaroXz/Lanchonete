@@ -18,6 +18,7 @@ namespace Lanchonete.Telas
         {
             InitializeComponent();
         }
+        int cod = 0;
 
         private void f_CadClientes_Load(object sender, EventArgs e)
         {
@@ -41,10 +42,7 @@ namespace Lanchonete.Telas
             msk_celular2.Text = string.Empty;
             tb_contato.Text = string.Empty;
 
-            dg_cliente.Columns[0].HeaderText = "Codigo";
-            dg_cliente.Columns[1].HeaderText = "Nome";
-            dg_cliente.Columns[2].HeaderText = "E-mail";
-
+            
             ClienteDAO clienteDAO = new ClienteDAO();
             DataTable clientes = clienteDAO.ListarClientes();
             dg_cliente.DataSource = clientes;
@@ -95,18 +93,35 @@ namespace Lanchonete.Telas
 
         private void bt_incluir_Click(object sender, EventArgs e)
         {
+            string codBanco;
+
+
             p_cadastrocli.Visible = true;
             lb_status.Text = "Incluir";
             tb_codigo.Enabled = true;
 
-            string cmdSql = "SELECT MAX(codigo) * FROM clientes";
+            string cmdSql = "SELECT MAX(codigo) as max_codigo FROM clientes";
             var dadosS = Program.cx.ExecutaSql(cmdSql);
 
+            if (dadosS != null)
+            {
+                DataRow linhaDados = dadosS.Rows[0];
+
+                codBanco = linhaDados["max_codigo"].ToString();
+                cod = int.Parse(codBanco);
+                cod++;
+            }
+            else
+            {
+                cod++;
+            }
+            tb_codigo.Text = cod.ToString();
         }
 
         private void bt_cancelar_Click(object sender, EventArgs e)
         {
             p_cadastrocli.Visible = false;
+            
         }
 
         private void bt_cep_Click(object sender, EventArgs e)
@@ -165,8 +180,8 @@ namespace Lanchonete.Telas
 
             cliente.GravaBanco();
 
-            p_cadastrocli.Visible = false;
-            tb_codigo.Text = string.Empty;
+            cod++;
+            tb_codigo.Text =  cod.ToString();
             tb_nome.Text = string.Empty;
             tb_apelido.Text = string.Empty;
             msk_cpfcnpj.Text = string.Empty;
