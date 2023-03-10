@@ -18,7 +18,12 @@ namespace Lanchonete.Telas
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// VARIAVEL QUE PODE SER ULTILIZADO NA TELA INTEIRA///
+        /// </summary>
         int cod = 0;
+        int padraoCod = 9;
+
 
         private void f_CadClientes_Load(object sender, EventArgs e)
         {
@@ -42,7 +47,9 @@ namespace Lanchonete.Telas
             msk_celular2.Text = string.Empty;
             tb_contato.Text = string.Empty;
 
-            
+            msk_cpfcnpj.Validating += new CancelEventHandler(msk_cpfcnpj_Validating);
+            msk_cep.Validating += new CancelEventHandler(msk_cep_Validating);
+
             ClienteDAO clienteDAO = new ClienteDAO();
             DataTable clientes = clienteDAO.ListarClientes();
             dg_cliente.DataSource = clientes;
@@ -94,8 +101,7 @@ namespace Lanchonete.Telas
         private void bt_incluir_Click(object sender, EventArgs e)
         {
             string codBanco;
-
-
+            
             p_cadastrocli.Visible = true;
             lb_status.Text = "Incluir";
             tb_codigo.Enabled = true;
@@ -115,7 +121,7 @@ namespace Lanchonete.Telas
             {
                 cod++;
             }
-            tb_codigo.Text = cod.ToString();
+            tb_codigo.Text = cod.ToString().PadLeft(padraoCod, '0');
         }
 
         private void bt_cancelar_Click(object sender, EventArgs e)
@@ -143,6 +149,7 @@ namespace Lanchonete.Telas
                     tb_bairro.Text = texto[1].Trim();
                     tb_cidade.Text = texto[2].Trim();
                     msk_cep.Text = texto[3].Trim();
+                    msk_cep.Mask = "#####-###";
                 }
                 else
                 {
@@ -181,7 +188,7 @@ namespace Lanchonete.Telas
             cliente.GravaBanco();
 
             cod++;
-            tb_codigo.Text =  cod.ToString();
+            tb_codigo.Text =  cod.ToString().PadLeft(padraoCod, '0');
             tb_nome.Text = string.Empty;
             tb_apelido.Text = string.Empty;
             msk_cpfcnpj.Text = string.Empty;
@@ -215,10 +222,43 @@ namespace Lanchonete.Telas
             }
             else
             {
+                msk_cpfcnpj.Text = string.Empty;
                 msk_cpfcnpj.Mask = "";
                 MessageBox.Show("CPF OU CNPJ é invalido, Por favor " +
                     "informe um CPF ou CNPJ valido");
             }
+        }
+
+        private void msk_cpfcnpj_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(msk_cpfcnpj.Text))
+            {
+                e.Cancel = true;
+                msk_cpfcnpj.Focus();
+                errorProvider1.SetError(msk_cpfcnpj, "Este campo é obrigatório.");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(msk_cpfcnpj, "");
+            }
+        }
+
+        private void msk_cep_Validating(object sender, CancelEventArgs e)
+        {
+            msk_cep.Mask = "";
+            if (string.IsNullOrEmpty(msk_cep.Text))
+            {
+                e.Cancel = true;
+                msk_cep.Focus();
+                errorProvider2.SetError(msk_cep, "Este campo é obrigatório.");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider2.SetError(msk_cep, "");
+            }
+            
         }
     }
 }

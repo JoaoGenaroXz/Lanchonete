@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dg_cliente = new System.Windows.Forms.DataGridView();
             this.bt_incluir = new System.Windows.Forms.Button();
             this.bt_alterar = new System.Windows.Forms.Button();
@@ -79,12 +80,16 @@
             this.lb_codigo = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dg_cliente)).BeginInit();
             this.p_cadastrocli.SuspendLayout();
             this.gb_cadrastrocli.SuspendLayout();
             this.gb_dadoscli.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             this.SuspendLayout();
             // 
             // dg_cliente
@@ -93,33 +98,33 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dg_cliente.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dg_cliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dg_cliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dg_cliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dg_cliente.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dg_cliente.DefaultCellStyle = dataGridViewCellStyle5;
             this.dg_cliente.Location = new System.Drawing.Point(162, 37);
             this.dg_cliente.Name = "dg_cliente";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dg_cliente.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dg_cliente.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dg_cliente.Size = new System.Drawing.Size(743, 429);
             this.dg_cliente.TabIndex = 0;
             // 
@@ -214,7 +219,7 @@
             this.bt_cancelar.Location = new System.Drawing.Point(789, 409);
             this.bt_cancelar.Name = "bt_cancelar";
             this.bt_cancelar.Size = new System.Drawing.Size(94, 33);
-            this.bt_cancelar.TabIndex = 8;
+            this.bt_cancelar.TabIndex = 19;
             this.bt_cancelar.Text = "Cancelar";
             this.bt_cancelar.UseVisualStyleBackColor = true;
             this.bt_cancelar.Click += new System.EventHandler(this.bt_cancelar_Click);
@@ -271,7 +276,7 @@
             this.msk_celular2.Mask = "(00) 00000-0000";
             this.msk_celular2.Name = "msk_celular2";
             this.msk_celular2.Size = new System.Drawing.Size(116, 24);
-            this.msk_celular2.TabIndex = 34;
+            this.msk_celular2.TabIndex = 16;
             // 
             // lb_celular2
             // 
@@ -291,7 +296,7 @@
             this.msk_telefone2.Mask = "(00) 0000-0000";
             this.msk_telefone2.Name = "msk_telefone2";
             this.msk_telefone2.Size = new System.Drawing.Size(109, 24);
-            this.msk_telefone2.TabIndex = 32;
+            this.msk_telefone2.TabIndex = 15;
             // 
             // lb_telefone2
             // 
@@ -311,7 +316,7 @@
             this.msk_celular.Mask = "(00) 00000-0000";
             this.msk_celular.Name = "msk_celular";
             this.msk_celular.Size = new System.Drawing.Size(119, 24);
-            this.msk_celular.TabIndex = 30;
+            this.msk_celular.TabIndex = 14;
             // 
             // lb_celular
             // 
@@ -331,7 +336,7 @@
             this.msk_telefone.Mask = "(00) 0000-0000";
             this.msk_telefone.Name = "msk_telefone";
             this.msk_telefone.Size = new System.Drawing.Size(109, 24);
-            this.msk_telefone.TabIndex = 28;
+            this.msk_telefone.TabIndex = 13;
             // 
             // lb_telefone
             // 
@@ -361,7 +366,7 @@
             this.tb_contato.Location = new System.Drawing.Point(145, 284);
             this.tb_contato.Name = "tb_contato";
             this.tb_contato.Size = new System.Drawing.Size(690, 24);
-            this.tb_contato.TabIndex = 25;
+            this.tb_contato.TabIndex = 17;
             // 
             // lb_email
             // 
@@ -381,7 +386,7 @@
             this.tb_email.Location = new System.Drawing.Point(145, 222);
             this.tb_email.Name = "tb_email";
             this.tb_email.Size = new System.Drawing.Size(690, 24);
-            this.tb_email.TabIndex = 23;
+            this.tb_email.TabIndex = 12;
             // 
             // lb_complemento
             // 
@@ -396,10 +401,10 @@
             // bt_cep
             // 
             this.bt_cep.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_cep.Location = new System.Drawing.Point(259, 162);
+            this.bt_cep.Location = new System.Drawing.Point(279, 162);
             this.bt_cep.Name = "bt_cep";
             this.bt_cep.Size = new System.Drawing.Size(47, 27);
-            this.bt_cep.TabIndex = 9;
+            this.bt_cep.TabIndex = 8;
             this.bt_cep.Text = "CEP";
             this.bt_cep.UseVisualStyleBackColor = true;
             this.bt_cep.Click += new System.EventHandler(this.bt_cep_Click);
@@ -412,7 +417,7 @@
             this.tb_complemento.Location = new System.Drawing.Point(145, 193);
             this.tb_complemento.Name = "tb_complemento";
             this.tb_complemento.Size = new System.Drawing.Size(690, 24);
-            this.tb_complemento.TabIndex = 21;
+            this.tb_complemento.TabIndex = 11;
             // 
             // tb_cidade
             // 
@@ -422,7 +427,7 @@
             this.tb_cidade.Location = new System.Drawing.Point(644, 164);
             this.tb_cidade.Name = "tb_cidade";
             this.tb_cidade.Size = new System.Drawing.Size(191, 24);
-            this.tb_cidade.TabIndex = 20;
+            this.tb_cidade.TabIndex = 10;
             // 
             // lb_cidade
             // 
@@ -439,16 +444,16 @@
             this.tb_bairro.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.tb_bairro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tb_bairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_bairro.Location = new System.Drawing.Point(381, 164);
+            this.tb_bairro.Location = new System.Drawing.Point(396, 164);
             this.tb_bairro.Name = "tb_bairro";
-            this.tb_bairro.Size = new System.Drawing.Size(189, 24);
-            this.tb_bairro.TabIndex = 18;
+            this.tb_bairro.Size = new System.Drawing.Size(179, 24);
+            this.tb_bairro.TabIndex = 9;
             // 
             // lb_bairro
             // 
             this.lb_bairro.AutoSize = true;
             this.lb_bairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_bairro.Location = new System.Drawing.Point(327, 167);
+            this.lb_bairro.Location = new System.Drawing.Point(342, 167);
             this.lb_bairro.Name = "lb_bairro";
             this.lb_bairro.Size = new System.Drawing.Size(48, 18);
             this.lb_bairro.TabIndex = 17;
@@ -462,7 +467,7 @@
             this.tb_numero.Location = new System.Drawing.Point(771, 134);
             this.tb_numero.Name = "tb_numero";
             this.tb_numero.Size = new System.Drawing.Size(64, 24);
-            this.tb_numero.TabIndex = 16;
+            this.tb_numero.TabIndex = 6;
             // 
             // lb_numero
             // 
@@ -478,12 +483,13 @@
             // 
             this.msk_cep.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.msk_cep.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msk_cep.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Insert;
+            this.msk_cep.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Overwrite;
             this.msk_cep.Location = new System.Drawing.Point(144, 163);
             this.msk_cep.Mask = "00000-000";
             this.msk_cep.Name = "msk_cep";
             this.msk_cep.Size = new System.Drawing.Size(109, 24);
-            this.msk_cep.TabIndex = 14;
+            this.msk_cep.TabIndex = 7;
+            this.msk_cep.Validating += new System.ComponentModel.CancelEventHandler(this.msk_cep_Validating);
             // 
             // label2
             // 
@@ -503,7 +509,7 @@
             this.tb_endereco.Location = new System.Drawing.Point(144, 134);
             this.tb_endereco.Name = "tb_endereco";
             this.tb_endereco.Size = new System.Drawing.Size(546, 24);
-            this.tb_endereco.TabIndex = 12;
+            this.tb_endereco.TabIndex = 5;
             // 
             // lb_endereco
             // 
@@ -523,7 +529,7 @@
             this.tb_rg.Location = new System.Drawing.Point(665, 99);
             this.tb_rg.Name = "tb_rg";
             this.tb_rg.Size = new System.Drawing.Size(170, 24);
-            this.tb_rg.TabIndex = 10;
+            this.tb_rg.TabIndex = 4;
             // 
             // lb_rg
             // 
@@ -542,8 +548,9 @@
             this.msk_cpfcnpj.Location = new System.Drawing.Point(144, 99);
             this.msk_cpfcnpj.Name = "msk_cpfcnpj";
             this.msk_cpfcnpj.Size = new System.Drawing.Size(180, 24);
-            this.msk_cpfcnpj.TabIndex = 8;
+            this.msk_cpfcnpj.TabIndex = 3;
             this.msk_cpfcnpj.Leave += new System.EventHandler(this.msk_cpfcnpj_Leave);
+            this.msk_cpfcnpj.Validating += new System.ComponentModel.CancelEventHandler(this.msk_cpfcnpj_Validating);
             // 
             // tb_apelido
             // 
@@ -553,7 +560,7 @@
             this.tb_apelido.Location = new System.Drawing.Point(144, 68);
             this.tb_apelido.Name = "tb_apelido";
             this.tb_apelido.Size = new System.Drawing.Size(691, 24);
-            this.tb_apelido.TabIndex = 7;
+            this.tb_apelido.TabIndex = 2;
             // 
             // lb_apelido
             // 
@@ -583,7 +590,7 @@
             this.tb_nome.Location = new System.Drawing.Point(143, 40);
             this.tb_nome.Name = "tb_nome";
             this.tb_nome.Size = new System.Drawing.Size(692, 24);
-            this.tb_nome.TabIndex = 3;
+            this.tb_nome.TabIndex = 1;
             // 
             // lb_nome
             // 
@@ -604,7 +611,7 @@
             this.bt_comfirmar.Location = new System.Drawing.Point(690, 409);
             this.bt_comfirmar.Name = "bt_comfirmar";
             this.bt_comfirmar.Size = new System.Drawing.Size(94, 33);
-            this.bt_comfirmar.TabIndex = 7;
+            this.bt_comfirmar.TabIndex = 18;
             this.bt_comfirmar.Text = "Confirmar";
             this.bt_comfirmar.UseVisualStyleBackColor = true;
             this.bt_comfirmar.Click += new System.EventHandler(this.bt_comfirmar_Click);
@@ -615,10 +622,12 @@
             this.tb_codigo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tb_codigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_codigo.Location = new System.Drawing.Point(86, 25);
+            this.tb_codigo.MaxLength = 9;
             this.tb_codigo.Name = "tb_codigo";
-            this.tb_codigo.Size = new System.Drawing.Size(61, 24);
-            this.tb_codigo.TabIndex = 4;
-            this.tb_codigo.Text = "000000";
+            this.tb_codigo.Size = new System.Drawing.Size(85, 24);
+            this.tb_codigo.TabIndex = 1;
+            this.tb_codigo.Text = "000000000";
+            this.tb_codigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lb_codigo
             // 
@@ -655,6 +664,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Opções";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            // 
             // F_CadClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -681,6 +698,8 @@
             this.gb_dadoscli.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -735,5 +754,7 @@
         private System.Windows.Forms.Label lb_celular2;
         private System.Windows.Forms.MaskedTextBox msk_telefone2;
         private System.Windows.Forms.Label lb_telefone2;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
     }
 }
