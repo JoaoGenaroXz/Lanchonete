@@ -97,6 +97,7 @@ namespace Lanchonete.Telas
                     tb_bairro.Text = texto[1].Trim();
                     tb_cidade.Text = texto[2].Trim();
                     msk_cep.Text = texto[3].Trim();
+                    msk_cep.Mask = "#####-###";
                 }
                 else
                 {

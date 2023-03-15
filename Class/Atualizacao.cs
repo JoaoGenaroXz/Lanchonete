@@ -46,7 +46,7 @@ namespace Lanchonete.Class
             }
             catch (Exception erro)
             {
-                this.MsgErro = erro.Message.ToString();
+               this.MsgErro = erro.Message.ToString();
             }
         }
     }
