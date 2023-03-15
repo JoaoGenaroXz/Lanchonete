@@ -29,7 +29,8 @@ namespace Lanchonete.Class
         private string celular2;
         private string email;
         private string contato;
-
+        private string desativado;
+        private string dataHora;
         public int Codigo
         {
             set { this.codigo = value; }
@@ -115,6 +116,18 @@ namespace Lanchonete.Class
             set { this.contato = value; }
             get { return this.contato; }
         }
+        public string Desativado
+        {
+            set { this.desativado = value; }
+            get { return this.desativado; }
+        }
+        public string DataHora
+        {
+            set { this.dataHora = value; }
+            get { return this.dataHora; }
+        }
+
+
         ////////////METODOS DO CLIENTE//////////
         public void GravaBanco()
         {
@@ -132,10 +145,27 @@ namespace Lanchonete.Class
             else
             {
                 //gravando no banco
-                string cmdSqlI = "INSERT INTO clientes (codigo, nome, apelido, cpfcnpj, rg, endereco, endnum, bairro, cep, cidade, complemento, telefone, celular, telefone2, celular2, email,contato) values" +
+                string cmdSqlI = "INSERT INTO clientes (codigo, nome, apelido, cpfcnpj, rg, endereco, endnum, bairro, cep, cidade, complemento, telefone, celular, telefone2, celular2, email, contato, desativado) values" +
                      "('" + Codigo + "','" + Nome + "','" + Apelido + "','" + Cpfcnpj + "','" + rg + "','" + Endereco + "','" + Numero + "','" + Bairro + "'," +
-                     "'" + Cep + "','" + Cidade + "','" + Complemento + "','" + Telefone + "','" + Celular + "','" + Telefone2 + "','" + Celular2 + "','" + Email + "','" + Contato + "')";
+                     "'" + Cep + "','" + Cidade + "','" + Complemento + "','" + Telefone + "','" + Celular + "','" + Telefone2 + "','" + Celular2 + "','" + Email + "','" + Contato + "','N')";
                 var dadosI = Program.cx.ExecutaSql(cmdSqlI);
+            }
+        }
+        public void Desativar()
+        {
+            string cmdSql = "SELECT FROM clientes WHERE codigo = '" + Codigo + "'";
+            var dadosS = Program.cx.ExecutaSql(cmdSql);
+
+            if(dadosS != null)
+            {
+                string cmdSqlI = "INSERT INTO clientes (desativado, datahora) value (" + Desativado + "'," + DataHora + ") WHERE codigo = '" + Codigo + "'";
+                var dadosI = Program.cx.ExecutaSql(cmdSqlI);
+               
+            }
+            else
+            {
+                string cmdSqlU = "UPDATE clientes SET desativado = '" + Desativado + "', datahora ='" + DataHora + "' WHERE codigo = '" + Codigo + "'";
+                var dadosU = Program.cx.ExecutaSql(cmdSqlU);
             }
         }
     }

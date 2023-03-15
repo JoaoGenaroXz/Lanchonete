@@ -113,7 +113,6 @@ namespace Lanchonete.Telas
             this.Controls.Add(this.BT_Cancelar);
             this.Controls.Add(this.TX_Usuario);
             this.Controls.Add(this.Usuário);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

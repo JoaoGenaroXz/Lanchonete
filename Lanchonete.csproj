@@ -173,11 +173,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\Atualizacao.cs" />
-    <Compile Include="Class\Clientes.cs" />
+    <Compile Include="Objetos\Clientes.cs" />
     <Compile Include="Class\Conexao.cs" />
-    <Compile Include="Class\CorreioService.cs" />
-    <Compile Include="Class\Empresa.cs" />
-    <Compile Include="Class\Usuario.cs" />
+    <Compile Include="WebServices\CorreioService.cs" />
+    <Compile Include="Objetos\Empresa.cs" />
+    <Compile Include="Objetos\Usuario.cs" />
     <Compile Include="DAO\ClienteDAO.cs" />
     <Compile Include="Connected Services\WSCorreios\Reference.cs">
       <AutoGen>True</AutoGen>
