@@ -1,4 +1,5 @@
 ﻿using Lanchonete.Class;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,6 +24,7 @@ namespace Lanchonete.Telas
         /// </summary>
         int cod = 0;
         int padraoCod = 9;
+        string cellCod ="";
 
 
         private void f_CadClientes_Load(object sender, EventArgs e)
@@ -50,13 +52,58 @@ namespace Lanchonete.Telas
             msk_cpfcnpj.Validating += new CancelEventHandler(msk_cpfcnpj_Validating);
             msk_cep.Validating += new CancelEventHandler(msk_cep_Validating);
 
+            
+
             ClienteDAO clienteDAO = new ClienteDAO();
             DataTable clientes = clienteDAO.ListarClientes();
             dg_cliente.DataSource = clientes;
-            
+
+            ///Configuracao da apresentacao do DATAGRID///
+            dg_cliente.ColumnHeadersDefaultCellStyle.BackColor = Color.DarkRed;
+                      
+            dg_cliente.DefaultCellStyle.BackColor = Color.LightSteelBlue;
+            string format = "000000000";
+            dg_cliente.Columns[0].HeaderText = "Codigo";
+            dg_cliente.Columns[0].HeaderCell.Style.Font = new Font("Arial", 9);
+            dg_cliente.Columns[0].DefaultCellStyle.Font = new Font("Arial", 10);
+            dg_cliente.Columns[0].DefaultCellStyle.Format = format;
+            dg_cliente.Columns[1].HeaderText = "Nome/Razao Social";
+            dg_cliente.Columns[1].HeaderCell.Style.Font = new Font("Arial", 9);
+            dg_cliente.Columns[1].DefaultCellStyle.Font = new Font("Arial", 10);
+            dg_cliente.Columns[2].HeaderText = "Nome Fantasia";
+            dg_cliente.Columns[2].HeaderCell.Style.Font = new Font("Arial", 9);
+            dg_cliente.Columns[2].DefaultCellStyle.Font = new Font("Arial", 10);
+            dg_cliente.Columns[3].HeaderText = "Cpf - Cnpj";
+            dg_cliente.Columns[3].HeaderCell.Style.Font = new Font("Arial", 9);
+            dg_cliente.Columns[3].DefaultCellStyle.Font = new Font("Arial", 10);
+            dg_cliente.Columns[4].HeaderText = "IE - RG";
+            dg_cliente.Columns[4].HeaderCell.Style.Font = new Font("Arial", 9);
+            dg_cliente.Columns[4].DefaultCellStyle.Font = new Font("Arial", 10);
+            dg_cliente.Columns[5].HeaderText = "Endereço";
+            dg_cliente.Columns[5].HeaderCell.Style.Font = new Font("Arial", 9);
+            dg_cliente.Columns[5].DefaultCellStyle.Font = new Font("Arial", 10);
+            dg_cliente.Columns[6].HeaderText = "Numero";
+            dg_cliente.Columns[6].HeaderCell.Style.Font = new Font("Arial", 9);
+            dg_cliente.Columns[6].DefaultCellStyle.Font = new Font("Arial", 10);
+            dg_cliente.Columns[7].HeaderText = "CEP";
+            dg_cliente.Columns[7].HeaderCell.Style.Font = new Font("Arial", 9);
+            dg_cliente.Columns[7].DefaultCellStyle.Font = new Font("Arial", 10);
+            dg_cliente.Columns[9].HeaderText = "Bairro";
+            dg_cliente.Columns[9].HeaderCell.Style.Font = new Font("Arial", 9);
+            dg_cliente.Columns[9].DefaultCellStyle.Font = new Font("Arial", 10);
+            dg_cliente.Columns[8].HeaderText = "Cidade / UF";
+            dg_cliente.Columns[8].HeaderCell.Style.Font = new Font("Arial", 9);
+            dg_cliente.Columns[8].DefaultCellStyle.Font = new Font("Arial", 10);
+
+            dg_cliente.Columns[10].Visible = false;
+            dg_cliente.Columns[11].Visible = false;
+            dg_cliente.Columns[12].Visible = false;
+            dg_cliente.Columns[13].Visible = false;
+            dg_cliente.Columns[14].Visible = false;
+            dg_cliente.Columns[15].Visible = false;
+            dg_cliente.Columns[16].Visible = false;
+            ////////////////////////////////////////////////////////////////////
             dg_cliente.Refresh();
-
-
         }
 
         private void bt_voltar_Click(object sender, EventArgs e)
@@ -66,19 +113,25 @@ namespace Lanchonete.Telas
 
         private void bt_alterar_Click(object sender, EventArgs e)
         {
+            ///variavel de uso so para o evento///
+            int codBanco = 0;
+            /////////////////////////////////////
+            
             p_cadastrocli.Visible = true;
             lb_status.Text = "Alterar";
             tb_codigo.Enabled = false;
             Clientes clientes = new Clientes();
+            codBanco = int.Parse(cellCod);
+            
 
-            string cmdSql = "SELECT * FROM clientes WHERE codigo = '" + clientes.Codigo + "'";
+            string cmdSql = "SELECT * FROM clientes WHERE codigo = '" + codBanco + "'";
             var dadosS = Program.cx.ExecutaSql(cmdSql);
 
             if ((dadosS != null))
             {
                 DataRow linhaDados = dadosS.Rows[0];
 
-                tb_codigo.Text = linhaDados["codigo"].ToString();
+                tb_codigo.Text = linhaDados["codigo"].ToString().PadLeft(padraoCod, '0');
                 tb_nome.Text = linhaDados["nome"].ToString();
                 tb_apelido.Text = linhaDados["apelido"].ToString();
                 msk_cpfcnpj.Text = linhaDados["cpfcnpj"].ToString();
@@ -95,6 +148,7 @@ namespace Lanchonete.Telas
                 tb_cidade.Text = linhaDados["cidade"].ToString();
                 tb_complemento.Text = linhaDados["complemento"].ToString();
                 tb_contato.Text = linhaDados["contato"].ToString();
+
             }
         }
 
@@ -258,7 +312,21 @@ namespace Lanchonete.Telas
                 e.Cancel = false;
                 errorProvider2.SetError(msk_cep, "");
             }
-            
+        }
+
+        private void dg_cliente_SelectionChanged_1(object sender, EventArgs e)
+        {
+            // Verifique se alguma célula está selecionada
+            if (dg_cliente.SelectedCells.Count > 0)
+            {
+                // Obtenha a linha da célula selecionada
+                int rowIndex = dg_cliente.SelectedCells[0].RowIndex;
+
+                // Selecione a linha inteira
+                dg_cliente.Rows[rowIndex].Selected = true;
+                cellCod = dg_cliente.Rows[rowIndex].Cells[0].Value.ToString();
+
+            }
         }
     }
 }

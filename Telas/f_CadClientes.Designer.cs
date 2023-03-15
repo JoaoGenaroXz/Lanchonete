@@ -127,6 +127,7 @@
             this.dg_cliente.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dg_cliente.Size = new System.Drawing.Size(743, 429);
             this.dg_cliente.TabIndex = 0;
+            this.dg_cliente.SelectionChanged += new System.EventHandler(this.dg_cliente_SelectionChanged_1);
             // 
             // bt_incluir
             // 
@@ -178,7 +179,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.p_cadastrocli.Controls.Add(this.lb_status);
             this.p_cadastrocli.Controls.Add(this.gb_cadrastrocli);
-            this.p_cadastrocli.Location = new System.Drawing.Point(2, 5);
+            this.p_cadastrocli.Location = new System.Drawing.Point(3, 2);
             this.p_cadastrocli.Name = "p_cadastrocli";
             this.p_cadastrocli.Size = new System.Drawing.Size(926, 497);
             this.p_cadastrocli.TabIndex = 5;
