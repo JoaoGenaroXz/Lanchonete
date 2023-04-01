@@ -173,8 +173,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\Atualizacao.cs" />
+    <Compile Include="DAO\FornecedorDAO.cs" />
+    <Compile Include="Objetos\Fornecedor.cs" />
     <Compile Include="Objetos\Clientes.cs" />
     <Compile Include="Class\Conexao.cs" />
+    <Compile Include="Telas\F_CadFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\F_CadFornecedor.Designer.cs">
+      <DependentUpon>F_CadFornecedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="WebServices\CorreioService.cs" />
     <Compile Include="Objetos\Empresa.cs" />
     <Compile Include="Objetos\Usuario.cs" />
@@ -222,6 +230,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Telas\F_CadFornecedor.resx">
+      <DependentUpon>F_CadFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Telas\F_CadClientes.resx">
       <DependentUpon>F_CadClientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -411,7 +422,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>

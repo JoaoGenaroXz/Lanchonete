@@ -1,6 +1,6 @@
 ﻿namespace Lanchonete.Telas
 {
-    partial class F_CadClientes
+    partial class F_CadFornecedor
     {
         /// <summary>
         /// Required designer variable.
@@ -29,15 +29,25 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dg_cliente = new System.Windows.Forms.DataGridView();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.dg_fornecedor = new System.Windows.Forms.DataGridView();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apelido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cpfcnpj = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ie = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.endereco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.num = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bairro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cep = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bt_incluir = new System.Windows.Forms.Button();
             this.bt_alterar = new System.Windows.Forms.Button();
             this.bt_desativa = new System.Windows.Forms.Button();
             this.bt_voltar = new System.Windows.Forms.Button();
-            this.p_cadastrocli = new System.Windows.Forms.Panel();
+            this.p_cadastrofor = new System.Windows.Forms.Panel();
             this.lb_status = new System.Windows.Forms.Label();
             this.gb_cadrastrocli = new System.Windows.Forms.GroupBox();
             this.bt_cancelar = new System.Windows.Forms.Button();
@@ -83,25 +93,15 @@
             this.bt_pesq = new System.Windows.Forms.Button();
             this.tb_pesq = new System.Windows.Forms.TextBox();
             this.lb_pesq1 = new System.Windows.Forms.Label();
-            this.lb_statuscli = new System.Windows.Forms.Label();
+            this.lb_statusfor = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.bt_altPesq = new System.Windows.Forms.Button();
             this.bt_visualizar = new System.Windows.Forms.Button();
             this.bt_alternar = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apelido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cpfcnpj = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ie = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.endereco = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.num = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bairro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cep = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dg_cliente)).BeginInit();
-            this.p_cadastrocli.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dg_fornecedor)).BeginInit();
+            this.p_cadastrofor.SuspendLayout();
             this.gb_cadrastrocli.SuspendLayout();
             this.gb_dadoscli.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -110,25 +110,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             this.SuspendLayout();
             // 
-            // dg_cliente
+            // dg_fornecedor
             // 
-            this.dg_cliente.AllowUserToAddRows = false;
-            this.dg_cliente.AllowUserToDeleteRows = false;
-            this.dg_cliente.AllowUserToOrderColumns = true;
-            this.dg_cliente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dg_fornecedor.AllowUserToAddRows = false;
+            this.dg_fornecedor.AllowUserToDeleteRows = false;
+            this.dg_fornecedor.AllowUserToOrderColumns = true;
+            this.dg_fornecedor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dg_cliente.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dg_cliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dg_cliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dg_cliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dg_fornecedor.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dg_fornecedor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dg_fornecedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dg_fornecedor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
             this.Nome,
             this.apelido,
@@ -139,28 +139,98 @@
             this.bairro,
             this.cidade,
             this.cep});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dg_cliente.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dg_cliente.Location = new System.Drawing.Point(153, 28);
-            this.dg_cliente.Name = "dg_cliente";
-            this.dg_cliente.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.CornflowerBlue;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dg_cliente.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dg_cliente.Size = new System.Drawing.Size(743, 403);
-            this.dg_cliente.TabIndex = 0;
-            this.dg_cliente.SelectionChanged += new System.EventHandler(this.dg_cliente_SelectionChanged_1);
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dg_fornecedor.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dg_fornecedor.Location = new System.Drawing.Point(153, 28);
+            this.dg_fornecedor.Name = "dg_fornecedor";
+            this.dg_fornecedor.ReadOnly = true;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.CornflowerBlue;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dg_fornecedor.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.dg_fornecedor.Size = new System.Drawing.Size(743, 403);
+            this.dg_fornecedor.TabIndex = 0;
+            this.dg_fornecedor.SelectionChanged += new System.EventHandler(this.dg_cliente_SelectionChanged_1);
+            // 
+            // Codigo
+            // 
+            this.Codigo.DataPropertyName = "codigo";
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            // 
+            // Nome
+            // 
+            this.Nome.DataPropertyName = "nome";
+            this.Nome.HeaderText = "Nome / Razão Social";
+            this.Nome.Name = "Nome";
+            this.Nome.ReadOnly = true;
+            // 
+            // apelido
+            // 
+            this.apelido.DataPropertyName = "apelido";
+            this.apelido.HeaderText = "Apelido / Fantasia";
+            this.apelido.Name = "apelido";
+            this.apelido.ReadOnly = true;
+            // 
+            // cpfcnpj
+            // 
+            this.cpfcnpj.DataPropertyName = "cpfcnpj";
+            this.cpfcnpj.HeaderText = "CPF / CNPJ";
+            this.cpfcnpj.Name = "cpfcnpj";
+            this.cpfcnpj.ReadOnly = true;
+            // 
+            // ie
+            // 
+            this.ie.DataPropertyName = "rg";
+            this.ie.HeaderText = "IE / RG";
+            this.ie.Name = "ie";
+            this.ie.ReadOnly = true;
+            // 
+            // endereco
+            // 
+            this.endereco.DataPropertyName = "endereco";
+            this.endereco.HeaderText = "Endereço";
+            this.endereco.Name = "endereco";
+            this.endereco.ReadOnly = true;
+            // 
+            // num
+            // 
+            this.num.DataPropertyName = "endnum";
+            this.num.HeaderText = "Numero";
+            this.num.Name = "num";
+            this.num.ReadOnly = true;
+            // 
+            // bairro
+            // 
+            this.bairro.DataPropertyName = "bairro";
+            this.bairro.HeaderText = "Bairro";
+            this.bairro.Name = "bairro";
+            this.bairro.ReadOnly = true;
+            // 
+            // cidade
+            // 
+            this.cidade.DataPropertyName = "cidade";
+            this.cidade.HeaderText = "Cidade";
+            this.cidade.Name = "cidade";
+            this.cidade.ReadOnly = true;
+            // 
+            // cep
+            // 
+            this.cep.DataPropertyName = "cep";
+            this.cep.HeaderText = "CEP";
+            this.cep.Name = "cep";
+            this.cep.ReadOnly = true;
             // 
             // bt_incluir
             // 
@@ -206,14 +276,14 @@
             this.bt_voltar.UseVisualStyleBackColor = true;
             this.bt_voltar.Click += new System.EventHandler(this.bt_voltar_Click);
             // 
-            // p_cadastrocli
+            // p_cadastrofor
             // 
-            this.p_cadastrocli.Controls.Add(this.lb_status);
-            this.p_cadastrocli.Controls.Add(this.gb_cadrastrocli);
-            this.p_cadastrocli.Location = new System.Drawing.Point(3, 2);
-            this.p_cadastrocli.Name = "p_cadastrocli";
-            this.p_cadastrocli.Size = new System.Drawing.Size(926, 497);
-            this.p_cadastrocli.TabIndex = 5;
+            this.p_cadastrofor.Controls.Add(this.lb_status);
+            this.p_cadastrofor.Controls.Add(this.gb_cadrastrocli);
+            this.p_cadastrofor.Location = new System.Drawing.Point(1, 1);
+            this.p_cadastrofor.Name = "p_cadastrofor";
+            this.p_cadastrofor.Size = new System.Drawing.Size(926, 497);
+            this.p_cadastrofor.TabIndex = 5;
             // 
             // lb_status
             // 
@@ -680,8 +750,8 @@
             this.groupBox1.Controls.Add(this.bt_pesq);
             this.groupBox1.Controls.Add(this.tb_pesq);
             this.groupBox1.Controls.Add(this.lb_pesq1);
-            this.groupBox1.Controls.Add(this.dg_cliente);
-            this.groupBox1.Controls.Add(this.lb_statuscli);
+            this.groupBox1.Controls.Add(this.dg_fornecedor);
+            this.groupBox1.Controls.Add(this.lb_statusfor);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Location = new System.Drawing.Point(12, 10);
             this.groupBox1.Name = "groupBox1";
@@ -702,7 +772,7 @@
             // bt_pesq
             // 
             this.bt_pesq.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_pesq.Location = new System.Drawing.Point(579, 438);
+            this.bt_pesq.Location = new System.Drawing.Point(568, 438);
             this.bt_pesq.Name = "bt_pesq";
             this.bt_pesq.Size = new System.Drawing.Size(47, 29);
             this.bt_pesq.TabIndex = 10;
@@ -715,7 +785,7 @@
             this.tb_pesq.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.tb_pesq.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tb_pesq.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_pesq.Location = new System.Drawing.Point(303, 440);
+            this.tb_pesq.Location = new System.Drawing.Point(290, 440);
             this.tb_pesq.Name = "tb_pesq";
             this.tb_pesq.Size = new System.Drawing.Size(270, 24);
             this.tb_pesq.TabIndex = 9;
@@ -730,16 +800,16 @@
             this.lb_pesq1.TabIndex = 7;
             this.lb_pesq1.Text = "Pesquisar :";
             // 
-            // lb_statuscli
+            // lb_statusfor
             // 
-            this.lb_statuscli.AutoSize = true;
-            this.lb_statuscli.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_statuscli.ForeColor = System.Drawing.Color.Navy;
-            this.lb_statuscli.Location = new System.Drawing.Point(633, 441);
-            this.lb_statuscli.Name = "lb_statuscli";
-            this.lb_statuscli.Size = new System.Drawing.Size(190, 24);
-            this.lb_statuscli.TabIndex = 6;
-            this.lb_statuscli.Text = "CLIENTES ATIVOS";
+            this.lb_statusfor.AutoSize = true;
+            this.lb_statusfor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_statusfor.ForeColor = System.Drawing.Color.Navy;
+            this.lb_statusfor.Location = new System.Drawing.Point(643, 441);
+            this.lb_statusfor.Name = "lb_statusfor";
+            this.lb_statusfor.Size = new System.Drawing.Size(170, 24);
+            this.lb_statusfor.TabIndex = 6;
+            this.lb_statusfor.Text = "FORNEC. ATIVO";
             // 
             // groupBox2
             // 
@@ -798,95 +868,25 @@
             // 
             this.errorProvider2.ContainerControl = this;
             // 
-            // Codigo
-            // 
-            this.Codigo.DataPropertyName = "codigo";
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
-            // 
-            // Nome
-            // 
-            this.Nome.DataPropertyName = "nome";
-            this.Nome.HeaderText = "Nome / Razão Social";
-            this.Nome.Name = "Nome";
-            this.Nome.ReadOnly = true;
-            // 
-            // apelido
-            // 
-            this.apelido.DataPropertyName = "apelido";
-            this.apelido.HeaderText = "Apelido / Fantasia";
-            this.apelido.Name = "apelido";
-            this.apelido.ReadOnly = true;
-            // 
-            // cpfcnpj
-            // 
-            this.cpfcnpj.DataPropertyName = "cpfcnpj";
-            this.cpfcnpj.HeaderText = "CPF / CNPJ";
-            this.cpfcnpj.Name = "cpfcnpj";
-            this.cpfcnpj.ReadOnly = true;
-            // 
-            // ie
-            // 
-            this.ie.DataPropertyName = "rg";
-            this.ie.HeaderText = "IE / RG";
-            this.ie.Name = "ie";
-            this.ie.ReadOnly = true;
-            // 
-            // endereco
-            // 
-            this.endereco.DataPropertyName = "endereco";
-            this.endereco.HeaderText = "Endereço";
-            this.endereco.Name = "endereco";
-            this.endereco.ReadOnly = true;
-            // 
-            // num
-            // 
-            this.num.DataPropertyName = "endnum";
-            this.num.HeaderText = "Numero";
-            this.num.Name = "num";
-            this.num.ReadOnly = true;
-            // 
-            // bairro
-            // 
-            this.bairro.DataPropertyName = "bairro";
-            this.bairro.HeaderText = "Bairro";
-            this.bairro.Name = "bairro";
-            this.bairro.ReadOnly = true;
-            // 
-            // cidade
-            // 
-            this.cidade.DataPropertyName = "cidade";
-            this.cidade.HeaderText = "Cidade";
-            this.cidade.Name = "cidade";
-            this.cidade.ReadOnly = true;
-            // 
-            // cep
-            // 
-            this.cep.DataPropertyName = "cep";
-            this.cep.HeaderText = "CEP";
-            this.cep.Name = "cep";
-            this.cep.ReadOnly = true;
-            // 
-            // F_CadClientes
+            // F_CadFornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(933, 507);
-            this.Controls.Add(this.p_cadastrocli);
+            this.Controls.Add(this.p_cadastrofor);
             this.Controls.Add(this.bt_incluir);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "F_CadClientes";
-            this.Text = "Cadastro de Clientes";
-            this.Load += new System.EventHandler(this.f_CadClientes_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dg_cliente)).EndInit();
-            this.p_cadastrocli.ResumeLayout(false);
-            this.p_cadastrocli.PerformLayout();
+            this.Name = "F_CadFornecedor";
+            this.Text = "Cadastro de Fornecedor";
+            this.Load += new System.EventHandler(this.f_Cadfornecedor_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dg_fornecedor)).EndInit();
+            this.p_cadastrofor.ResumeLayout(false);
+            this.p_cadastrofor.PerformLayout();
             this.gb_cadrastrocli.ResumeLayout(false);
             this.gb_cadrastrocli.PerformLayout();
             this.gb_dadoscli.ResumeLayout(false);
@@ -902,12 +902,12 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dg_cliente;
+        private System.Windows.Forms.DataGridView dg_fornecedor;
         private System.Windows.Forms.Button bt_incluir;
         private System.Windows.Forms.Button bt_alterar;
         private System.Windows.Forms.Button bt_desativa;
         private System.Windows.Forms.Button bt_voltar;
-        private System.Windows.Forms.Panel p_cadastrocli;
+        private System.Windows.Forms.Panel p_cadastrofor;
         private System.Windows.Forms.Button bt_cancelar;
         private System.Windows.Forms.Button bt_confirmar;
         private System.Windows.Forms.Label lb_status;
@@ -952,7 +952,7 @@
         private System.Windows.Forms.Label lb_telefone2;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ErrorProvider errorProvider2;
-        private System.Windows.Forms.Label lb_statuscli;
+        private System.Windows.Forms.Label lb_statusfor;
         private System.Windows.Forms.Button bt_alternar;
         private System.Windows.Forms.Button bt_visualizar;
         private System.Windows.Forms.Label lb_pesq1;

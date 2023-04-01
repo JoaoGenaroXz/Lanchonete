@@ -16,9 +16,9 @@ using System.Windows.Forms;
 
 namespace Lanchonete.Telas
 {
-    public partial class F_CadClientes : Form
+    public partial class F_CadFornecedor : Form
     {
-        public F_CadClientes()
+        public F_CadFornecedor()
         {
             InitializeComponent();
         }
@@ -30,9 +30,9 @@ namespace Lanchonete.Telas
         string cellCod = "";
         string pesq = "";
 
-        private void f_CadClientes_Load(object sender, EventArgs e)
+        private void f_Cadfornecedor_Load(object sender, EventArgs e)
         {
-            p_cadastrocli.Visible = false;
+            p_cadastrofor.Visible = false;
             tb_codigo.Text = string.Empty;
             tb_nome.Text = string.Empty;
             tb_apelido.Text = string.Empty;
@@ -55,29 +55,29 @@ namespace Lanchonete.Telas
             msk_cpfcnpj.Validating += new CancelEventHandler(msk_cpfcnpj_Validating);
             msk_cep.Validating += new CancelEventHandler(msk_cep_Validating);
 
-            ClienteDAO clienteDAO = new ClienteDAO();
-            DataTable clientes = clienteDAO.ListarAtivos();
-            dg_cliente.DataSource = clientes;
-            dg_cliente.Refresh();
+            FornecedorDAO fornecedorDAO = new FornecedorDAO();
+            DataTable fornecedor = fornecedorDAO.ListarAtivos();
+            dg_fornecedor.DataSource = fornecedor;
+            dg_fornecedor.Refresh();
 
 
 
             ///Configuracao da apresentacao do DATAGRID///
 
-            dg_cliente.DefaultCellStyle.BackColor = Color.LightSteelBlue;
+            dg_fornecedor.DefaultCellStyle.BackColor = Color.LightSteelBlue;
             string format = "000000000";
-            dg_cliente.Columns[0].DefaultCellStyle.Format = format;
+            dg_fornecedor.Columns[0].DefaultCellStyle.Format = format;
 
             ////////////////////////////////////////////////////////////////////
 
-            if (dg_cliente.Rows.Count > 0)
+            if (dg_fornecedor.Rows.Count > 0)
             {
-                int lastRowIndex = dg_cliente.Rows.Count - 1;
-                object lastRow = dg_cliente.Rows[lastRowIndex];
+                int lastRowIndex = dg_fornecedor.Rows.Count - 1;
+                object lastRow = dg_fornecedor.Rows[lastRowIndex];
 
                 // Definir o foco na última linha
-                dg_cliente.FirstDisplayedScrollingRowIndex = lastRowIndex;
-                dg_cliente.CurrentCell = dg_cliente.Rows[lastRowIndex].Cells[0];
+                dg_fornecedor.FirstDisplayedScrollingRowIndex = lastRowIndex;
+                dg_fornecedor.CurrentCell = dg_fornecedor.Rows[lastRowIndex].Cells[0];
                 // Definir o foco na última linha
             }
         }
@@ -93,7 +93,7 @@ namespace Lanchonete.Telas
             int codBanco = 0;
             /////////////////////////////////////
 
-            p_cadastrocli.Visible = true;
+            p_cadastrofor.Visible = true;
             lb_status.Text = "Alterar";
             tb_codigo.Enabled = false;
 
@@ -116,11 +116,11 @@ namespace Lanchonete.Telas
             msk_celular2.Enabled = true;
             tb_contato.Enabled = true;
 
-            Clientes clientes = new Clientes();
+            Fornecedor fornecedor = new Fornecedor();
             codBanco = int.Parse(cellCod);
 
 
-            string cmdSql = "SELECT * FROM clientes WHERE codigo = '" + codBanco + "'";
+            string cmdSql = "SELECT * FROM fornecedor WHERE codigo = '" + codBanco + "'";
             var dadosS = Program.cx.ExecutaSql(cmdSql);
 
             if ((dadosS != null))
@@ -173,11 +173,11 @@ namespace Lanchonete.Telas
 
             string codBanco;
 
-            p_cadastrocli.Visible = true;
+            p_cadastrofor.Visible = true;
             lb_status.Text = "Incluir";
             tb_codigo.Enabled = true;
 
-            string cmdSql = "SELECT MAX(codigo) as max_codigo FROM clientes";
+            string cmdSql = "SELECT MAX(codigo) as max_codigo FROM fornecedor";
             var dadosS = Program.cx.ExecutaSql(cmdSql);
 
             if (dadosS != null)
@@ -203,21 +203,21 @@ namespace Lanchonete.Telas
         private void bt_cancelar_Click(object sender, EventArgs e)
         {
 
-            p_cadastrocli.Visible = false;
+            p_cadastrofor.Visible = false;
         }
 
         private void bt_cep_Click(object sender, EventArgs e)
         {
             //consulta no site dos correios//
             CorreioService consulta = new CorreioService();
-            Clientes cliente = new Clientes();
-            msk_cep.Mask = "";
-            cliente.Cep = msk_cep.Text;
+            Fornecedor fornecedor = new Fornecedor();
+            msk_cep.Mask = "";      
+            fornecedor.Cep = msk_cep.Text;
 
             //chamar o metodo da classe CorreioService//
-            if (!string.IsNullOrEmpty(cliente.Cep))
+            if (!string.IsNullOrEmpty(fornecedor.Cep))
             {
-                string end = consulta.ConsultaCep(cliente.Cep);
+                string end = consulta.ConsultaCep(fornecedor.Cep);
                 if (!end.Contains("Invalido"))
                 {
                     string[] texto = end.Split(',');// efetua a quebra do vetor de string//
@@ -242,25 +242,25 @@ namespace Lanchonete.Telas
         private void bt_confirmar_Click(object sender, EventArgs e)
         {
 
-            Clientes cliente = new Clientes();
+            Fornecedor fornecedor = new Fornecedor();
 
-            cliente.Codigo = int.Parse(tb_codigo.Text);
-            cliente.Nome = tb_nome.Text;
-            cliente.Apelido = tb_apelido.Text;
-            cliente.Cpfcnpj = msk_cpfcnpj.Text;
-            cliente.Rg = tb_rg.Text;
-            cliente.Endereco = tb_endereco.Text;
-            cliente.Numero = tb_numero.Text;
-            cliente.Cep = msk_cep.Text;
-            cliente.Bairro = tb_bairro.Text;
-            cliente.Cidade = tb_cidade.Text;
-            cliente.Complemento = tb_complemento.Text;
-            cliente.Email = tb_email.Text;
-            cliente.Telefone = msk_telefone.Text;
-            cliente.Celular = msk_celular.Text;
-            cliente.Telefone2 = msk_telefone2.Text;
-            cliente.Celular2 = msk_celular2.Text;
-            cliente.Contato = tb_contato.Text;
+            fornecedor.Codigo = int.Parse(tb_codigo.Text);
+            fornecedor.Nome = tb_nome.Text;
+            fornecedor.Apelido = tb_apelido.Text;
+            fornecedor.Cpfcnpj = msk_cpfcnpj.Text;
+            fornecedor.Rg = tb_rg.Text;
+            fornecedor.Endereco = tb_endereco.Text;
+            fornecedor.Numero = tb_numero.Text;
+            fornecedor.Cep = msk_cep.Text;
+            fornecedor.Bairro = tb_bairro.Text;
+            fornecedor.Cidade = tb_cidade.Text;
+            fornecedor.Complemento = tb_complemento.Text;
+            fornecedor.Email = tb_email.Text;
+            fornecedor.Telefone = msk_telefone.Text;
+            fornecedor.Celular = msk_celular.Text;
+            fornecedor.Telefone2 = msk_telefone2.Text;
+            fornecedor.Celular2 = msk_celular2.Text;
+            fornecedor.Contato = tb_contato.Text;
 
             // Chama o evento de validação do campo de CPF/CNPJ
             CancelEventArgs args = new CancelEventArgs();
@@ -280,11 +280,11 @@ namespace Lanchonete.Telas
             }
             else
             {
-                cliente.GravaBanco();
-                ClienteDAO clienteDAO = new ClienteDAO();
-                DataTable clientes = clienteDAO.ListarAtivos();
-                dg_cliente.DataSource = clientes;
-                dg_cliente.Refresh();
+                fornecedor.GravaBanco();
+                FornecedorDAO fornecedorDAO = new FornecedorDAO();
+                DataTable fornec = fornecedorDAO.ListarAtivos();
+                dg_fornecedor.DataSource = fornec;
+                dg_fornecedor.Refresh();
 
                 cod++;
                 tb_codigo.Text = cod.ToString().PadLeft(padraoCod, '0');
@@ -362,24 +362,24 @@ namespace Lanchonete.Telas
 
         private void dg_cliente_SelectionChanged_1(object sender, EventArgs e)
         {
-            if (dg_cliente.SelectedCells.Count == 0 && dg_cliente.Rows.Count > 0)
+            if (dg_fornecedor.SelectedCells.Count == 0 && dg_fornecedor.Rows.Count > 0)
             {
                 // Selecione a última linha
-                int lastIndex = dg_cliente.Rows.Count - 1;
-                dg_cliente.Rows[lastIndex].Selected = true;
-                if (dg_cliente.Rows[lastIndex].Cells.Count > 0 && dg_cliente.Rows[lastIndex].Cells[0].Value != null)
+                int lastIndex = dg_fornecedor.Rows.Count - 1;
+                dg_fornecedor.Rows[lastIndex].Selected = true;
+                if (dg_fornecedor.Rows[lastIndex].Cells.Count > 0 && dg_fornecedor.Rows[lastIndex].Cells[0].Value != null)
                 {
-                    cellCod = dg_cliente.Rows[lastIndex].Cells[0].Value.ToString();
+                    cellCod = dg_fornecedor.Rows[lastIndex].Cells[0].Value.ToString();
                 }
             }
-            else if (dg_cliente.SelectedCells.Count > 0)
+            else if (dg_fornecedor.SelectedCells.Count > 0)
             {
-                int rowIndex = dg_cliente.SelectedCells[0].RowIndex;
+                int rowIndex = dg_fornecedor.SelectedCells[0].RowIndex;
                 // Selecione a linha inteira
-                dg_cliente.Rows[rowIndex].Selected = true;
-                if (dg_cliente.Rows.Count > rowIndex && dg_cliente.Rows[rowIndex].Cells.Count > 0 && dg_cliente.Rows[rowIndex].Cells[0].Value != null)
+                dg_fornecedor.Rows[rowIndex].Selected = true;
+                if (dg_fornecedor.Rows.Count > rowIndex && dg_fornecedor.Rows[rowIndex].Cells.Count > 0 && dg_fornecedor.Rows[rowIndex].Cells[0].Value != null)
                 {
-                    cellCod = dg_cliente.Rows[rowIndex].Cells[0].Value.ToString();
+                    cellCod = dg_fornecedor.Rows[rowIndex].Cells[0].Value.ToString();
                 }
             }
         }
@@ -390,61 +390,61 @@ namespace Lanchonete.Telas
             {
                 var dataHora = DateTime.Now;
 
-                Clientes clientes = new Clientes();
-                clientes.Codigo = int.Parse(cellCod);
-                clientes.DataHora = dataHora.ToString();
-                clientes.Desativado = "S";
-                clientes.Desativar();
+                Fornecedor fornecedor = new Fornecedor();
+                fornecedor.Codigo = int.Parse(cellCod);
+                fornecedor.DataHora = dataHora.ToString();
+                fornecedor.Desativado = "S";
+                fornecedor.Desativar();
 
-                ClienteDAO clienteDAO = new ClienteDAO();
-                DataTable client = clienteDAO.ListarAtivos();
-                dg_cliente.DataSource = client;
+                FornecedorDAO fornecedorDAO = new FornecedorDAO();
+                DataTable fornec = fornecedorDAO.ListarAtivos();
+                dg_fornecedor.DataSource = fornec;
 
             }
             else if (bt_desativa.Text == "Ativar")
             {
                 var dataHora = DateTime.Now;
 
-                Clientes clientes = new Clientes();
-                clientes.Codigo = int.Parse(cellCod);
-                clientes.DataHora = dataHora.ToString();
-                clientes.Desativado = "N";
-                clientes.Desativar();
+                Fornecedor fornecedor = new Fornecedor();
+                fornecedor.Codigo = int.Parse(cellCod);
+                fornecedor.DataHora = dataHora.ToString();
+                fornecedor.Desativado = "N";
+                fornecedor.Desativar();
 
-                ClienteDAO clienteDAO = new ClienteDAO();
-                DataTable client = clienteDAO.ListarDesativados();
-                dg_cliente.DataSource = client;
+                FornecedorDAO fornecedorDAO = new FornecedorDAO();
+                DataTable fornec = fornecedorDAO.ListarAtivos();
+                dg_fornecedor.DataSource = fornec;
             }
         }
 
         private void bt_alternar_Click(object sender, EventArgs e)
         {
-            lb_statuscli.Text = "CLIENTES DESATIVADOS";
-            dg_cliente.DefaultCellStyle.BackColor = Color.Tomato;
+            lb_statusfor.Text = "FORNEC. DESATIVADOS";
+            dg_fornecedor.DefaultCellStyle.BackColor = Color.Tomato;
 
             if (bt_desativa.Text == "Ativar")
             {
-                lb_statuscli.Text = "CLIENTES ATIVOS";
-                dg_cliente.DefaultCellStyle.BackColor = Color.LightSteelBlue;
+                lb_statusfor.Text = "FORNEC. ATIVOS";
+                dg_fornecedor.DefaultCellStyle.BackColor = Color.LightSteelBlue;
 
-                lb_statuscli.ForeColor = Color.DarkBlue;
+                lb_statusfor.ForeColor = Color.DarkBlue;
                 bt_desativa.Text = "Desativar";
                 bt_incluir.Visible = true;
-                ClienteDAO clienteDAO = new ClienteDAO();
-                DataTable clientes = clienteDAO.ListarAtivos();
-                dg_cliente.DataSource = clientes;
-                dg_cliente.Refresh();
+                FornecedorDAO fornecedorDAO = new FornecedorDAO();
+                DataTable fornecedor = fornecedorDAO.ListarAtivos();
+                dg_fornecedor.DataSource = fornecedor;
+                dg_fornecedor.Refresh();
             }
             else
             {
-                lb_statuscli.ForeColor = Color.Red;
+                lb_statusfor.ForeColor = Color.Red;
                 bt_desativa.Text = "Ativar";
                 bt_confirmar.Visible = false;
                 bt_incluir.Visible = false;
-                ClienteDAO clienteDAO = new ClienteDAO();
-                DataTable clientes = clienteDAO.ListarDesativados();
-                dg_cliente.DataSource = clientes;
-                dg_cliente.Refresh();
+                FornecedorDAO fornecedorDAO = new FornecedorDAO();
+                DataTable fornecedor = fornecedorDAO.ListarDesativados();
+                dg_fornecedor.DataSource = fornecedor;
+                dg_fornecedor.Refresh();
             }
         }
 
@@ -454,7 +454,7 @@ namespace Lanchonete.Telas
             int codBanco = 0;
             /////////////////////////////////////
 
-            p_cadastrocli.Visible = true;
+            p_cadastrofor.Visible = true;
             lb_status.Text = "Visualizar";
             tb_codigo.Enabled = false;
             bt_confirmar.Visible = false;
@@ -477,10 +477,10 @@ namespace Lanchonete.Telas
             msk_celular2.Enabled = false;
             tb_contato.Enabled = false;
 
-            Clientes clientes = new Clientes();
+            Fornecedor fornecedor = new Fornecedor();
             codBanco = int.Parse(cellCod);
 
-            string cmdSql = "SELECT * FROM clientes WHERE codigo = '" + codBanco + "'";
+            string cmdSql = "SELECT * FROM fornecedor WHERE codigo = '" + codBanco + "'";
             var dadosS = Program.cx.ExecutaSql(cmdSql);
 
             if ((dadosS != null))
@@ -530,13 +530,13 @@ namespace Lanchonete.Telas
             bool encontrado = false;
             int rowIndex = 0;
 
-            foreach (DataGridViewRow row in dg_cliente.Rows)
+            foreach (DataGridViewRow row in dg_fornecedor.Rows)
             {
                 string valor = row.Cells[tipoPesquisa].Value.ToString();
                 if (valor.Contains(valorPesquisa))
                 {
-                    dg_cliente.CurrentCell = row.Cells[tipoPesquisa];
-                    dg_cliente.FirstDisplayedScrollingRowIndex = rowIndex;
+                    dg_fornecedor.CurrentCell = row.Cells[tipoPesquisa];
+                    dg_fornecedor.FirstDisplayedScrollingRowIndex = rowIndex;
                     encontrado = true;
                     break;
                 }

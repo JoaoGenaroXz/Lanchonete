@@ -37,7 +37,7 @@ namespace Lanchonete
             this.button9 = new System.Windows.Forms.Button();
             this.Bt_Lancamento = new System.Windows.Forms.Button();
             this.painelCadSubmenu = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
+            this.bt_fornecedor = new System.Windows.Forms.Button();
             this.bt_clientes = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.Bt_Empresa = new System.Windows.Forms.Button();
@@ -157,7 +157,7 @@ namespace Lanchonete
             // painelCadSubmenu
             // 
             this.painelCadSubmenu.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.painelCadSubmenu.Controls.Add(this.button5);
+            this.painelCadSubmenu.Controls.Add(this.bt_fornecedor);
             this.painelCadSubmenu.Controls.Add(this.bt_clientes);
             this.painelCadSubmenu.Controls.Add(this.button3);
             this.painelCadSubmenu.Controls.Add(this.Bt_Empresa);
@@ -168,21 +168,22 @@ namespace Lanchonete
             this.painelCadSubmenu.Size = new System.Drawing.Size(159, 180);
             this.painelCadSubmenu.TabIndex = 1;
             // 
-            // button5
+            // bt_fornecedor
             // 
-            this.button5.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.Black;
-            this.button5.Location = new System.Drawing.Point(0, 123);
-            this.button5.Name = "button5";
-            this.button5.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(159, 41);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Fornecedor";
-            this.button5.UseVisualStyleBackColor = false;
+            this.bt_fornecedor.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.bt_fornecedor.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bt_fornecedor.FlatAppearance.BorderSize = 0;
+            this.bt_fornecedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_fornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_fornecedor.ForeColor = System.Drawing.Color.Black;
+            this.bt_fornecedor.Location = new System.Drawing.Point(0, 123);
+            this.bt_fornecedor.Name = "bt_fornecedor";
+            this.bt_fornecedor.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.bt_fornecedor.Size = new System.Drawing.Size(159, 41);
+            this.bt_fornecedor.TabIndex = 5;
+            this.bt_fornecedor.Text = "Fornecedor";
+            this.bt_fornecedor.UseVisualStyleBackColor = false;
+            this.bt_fornecedor.Click += new System.EventHandler(this.bt_fornecedor_Click);
             // 
             // bt_clientes
             // 
@@ -294,7 +295,7 @@ namespace Lanchonete
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button Bt_Lancamento;
         private System.Windows.Forms.Panel painelCadSubmenu;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button bt_fornecedor;
         private System.Windows.Forms.Button bt_clientes;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button Bt_Empresa;

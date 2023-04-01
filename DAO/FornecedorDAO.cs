@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace Lanchonete
 {
-    internal class ClienteDAO
+    internal class FornecedorDAO
     {
         public DataTable ListarAtivos()
         {
-            string cmdSql = "SELECT codigo,nome,apelido,cpfcnpj,rg,endereco,endnum,bairro,cep,cidade FROM clientes WHERE desativado = 'N'";
+            string cmdSql = "SELECT codigo,nome,apelido,cpfcnpj,rg,endereco,endnum,bairro,cep,cidade FROM fornecedor WHERE desativado = 'N'";
             var dadosS = Program.cx.ExecutaSql(cmdSql);
 
             if (dadosS != null)
@@ -28,7 +28,7 @@ namespace Lanchonete
         }
         public DataTable ListarDesativados()
         {
-            string cmdSql = "SELECT codigo,nome,apelido,cpfcnpj,rg,endereco,endnum,bairro,cep,cidade FROM clientes WHERE desativado = 'S'";
+            string cmdSql = "SELECT codigo,nome,apelido,cpfcnpj,rg,endereco,endnum,bairro,cep,cidade FROM fornecedor WHERE desativado = 'S'";
             var dadosS = Program.cx.ExecutaSql(cmdSql);
 
             if (dadosS != null)
