@@ -39,14 +39,16 @@ namespace Lanchonete
             this.painelCadSubmenu = new System.Windows.Forms.Panel();
             this.bt_fornecedor = new System.Windows.Forms.Button();
             this.bt_clientes = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.bt_produto = new System.Windows.Forms.Button();
             this.Bt_Empresa = new System.Windows.Forms.Button();
             this.Bt_Cadastro = new System.Windows.Forms.Button();
             this.PainelLogo = new System.Windows.Forms.FlowLayoutPanel();
+            this.pb_config = new System.Windows.Forms.PictureBox();
             this.PanelMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             this.painelLanSubmenu.SuspendLayout();
             this.painelCadSubmenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_config)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelMenu
@@ -159,7 +161,7 @@ namespace Lanchonete
             this.painelCadSubmenu.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.painelCadSubmenu.Controls.Add(this.bt_fornecedor);
             this.painelCadSubmenu.Controls.Add(this.bt_clientes);
-            this.painelCadSubmenu.Controls.Add(this.button3);
+            this.painelCadSubmenu.Controls.Add(this.bt_produto);
             this.painelCadSubmenu.Controls.Add(this.Bt_Empresa);
             this.painelCadSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.painelCadSubmenu.ForeColor = System.Drawing.SystemColors.AppWorkspace;
@@ -202,21 +204,22 @@ namespace Lanchonete
             this.bt_clientes.UseVisualStyleBackColor = false;
             this.bt_clientes.Click += new System.EventHandler(this.bt_clientes_Click);
             // 
-            // button3
+            // bt_produto
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(0, 41);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(159, 41);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Produto";
-            this.button3.UseVisualStyleBackColor = false;
+            this.bt_produto.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.bt_produto.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bt_produto.FlatAppearance.BorderSize = 0;
+            this.bt_produto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_produto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_produto.ForeColor = System.Drawing.Color.Black;
+            this.bt_produto.Location = new System.Drawing.Point(0, 41);
+            this.bt_produto.Name = "bt_produto";
+            this.bt_produto.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.bt_produto.Size = new System.Drawing.Size(159, 41);
+            this.bt_produto.TabIndex = 3;
+            this.bt_produto.Text = "Produto";
+            this.bt_produto.UseVisualStyleBackColor = false;
+            this.bt_produto.Click += new System.EventHandler(this.bt_produto_Click);
             // 
             // Bt_Empresa
             // 
@@ -262,6 +265,18 @@ namespace Lanchonete
             this.PainelLogo.Size = new System.Drawing.Size(159, 80);
             this.PainelLogo.TabIndex = 0;
             // 
+            // pb_config
+            // 
+            this.pb_config.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pb_config.Image = global::Lanchonete.Properties.Resources.icons8_configurações_48;
+            this.pb_config.Location = new System.Drawing.Point(1175, 12);
+            this.pb_config.Name = "pb_config";
+            this.pb_config.Size = new System.Drawing.Size(48, 48);
+            this.pb_config.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pb_config.TabIndex = 1;
+            this.pb_config.TabStop = false;
+            this.pb_config.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pb_config_MouseClick);
+            // 
             // F_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -269,8 +284,10 @@ namespace Lanchonete
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1235, 538);
+            this.Controls.Add(this.pb_config);
             this.Controls.Add(this.PanelMenu);
             this.ForeColor = System.Drawing.Color.White;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "F_Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
@@ -279,7 +296,9 @@ namespace Lanchonete
             this.panel2.ResumeLayout(false);
             this.painelLanSubmenu.ResumeLayout(false);
             this.painelCadSubmenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pb_config)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -297,8 +316,9 @@ namespace Lanchonete
         private System.Windows.Forms.Panel painelCadSubmenu;
         private System.Windows.Forms.Button bt_fornecedor;
         private System.Windows.Forms.Button bt_clientes;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button bt_produto;
         private System.Windows.Forms.Button Bt_Empresa;
+        private System.Windows.Forms.PictureBox pb_config;
     }
 }
 

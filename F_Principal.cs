@@ -29,6 +29,14 @@ namespace Lanchonete
         {
             Application.Run(new F_CadFornecedor());
         }
+        private void AbrirCadProduto(object obj)
+        {
+            Application.Run(new F_CadProdutos());
+        }
+        private void AbrirConfiguracoes(object obj)
+        {
+            Application.Run(new F_Configuracao());
+        }
 
         public F_Principal()
         {
@@ -95,6 +103,20 @@ namespace Lanchonete
         private void bt_fornecedor_Click(object sender, EventArgs e)
         {
             Principal = new Thread(AbrirCadFornecedor);
+            Principal.SetApartmentState(ApartmentState.STA);
+            Principal.Start();
+        }
+
+        private void bt_produto_Click(object sender, EventArgs e)
+        {
+            Principal = new Thread(AbrirCadProduto);
+            Principal.SetApartmentState(ApartmentState.STA);
+            Principal.Start();
+        }
+
+        private void pb_config_MouseClick(object sender, MouseEventArgs e)
+        {
+            Principal = new Thread(AbrirConfiguracoes);
             Principal.SetApartmentState(ApartmentState.STA);
             Principal.Start();
         }

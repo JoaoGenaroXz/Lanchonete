@@ -35,6 +35,8 @@ namespace Lanchonete.Telas
             this.TX_Senha = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.BT_Confirma = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Usuário
@@ -100,6 +102,16 @@ namespace Lanchonete.Telas
             this.BT_Confirma.UseVisualStyleBackColor = true;
             this.BT_Confirma.Click += new System.EventHandler(this.BT_Confirma_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Lanchonete.Properties.Resources.icons8_bust_in_silhouette_100;
+            this.pictureBox1.Location = new System.Drawing.Point(111, 14);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
             // F_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -107,6 +119,7 @@ namespace Lanchonete.Telas
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(329, 334);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BT_Confirma);
             this.Controls.Add(this.TX_Senha);
             this.Controls.Add(this.label2);
@@ -120,6 +133,7 @@ namespace Lanchonete.Telas
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Login";
             this.TopMost = true;
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -133,5 +147,6 @@ namespace Lanchonete.Telas
         private System.Windows.Forms.TextBox TX_Senha;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button BT_Confirma;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

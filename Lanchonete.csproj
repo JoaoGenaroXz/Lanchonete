@@ -173,15 +173,30 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\Atualizacao.cs" />
+    <Compile Include="Class\Customiza.cs" />
+    <Compile Include="DAO\ProdutoDAO.cs" />
     <Compile Include="DAO\FornecedorDAO.cs" />
     <Compile Include="Objetos\Fornecedor.cs" />
     <Compile Include="Objetos\Clientes.cs" />
     <Compile Include="Class\Conexao.cs" />
+    <Compile Include="Objetos\Produtos.cs" />
+    <Compile Include="Telas\F_CadProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\F_CadProdutos.Designer.cs">
+      <DependentUpon>F_CadProdutos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\F_CadFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Telas\F_CadFornecedor.Designer.cs">
       <DependentUpon>F_CadFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\F_Configuracao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\F_Configuracao.Designer.cs">
+      <DependentUpon>F_Configuracao.cs</DependentUpon>
     </Compile>
     <Compile Include="WebServices\CorreioService.cs" />
     <Compile Include="Objetos\Empresa.cs" />
@@ -229,7 +244,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Telas\F_CadProdutos.resx">
+      <DependentUpon>F_CadProdutos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Telas\F_CadFornecedor.resx">
       <DependentUpon>F_CadFornecedor.cs</DependentUpon>
     </EmbeddedResource>
@@ -238,6 +257,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\F_CadEmpresas.resx">
       <DependentUpon>F_CadEmpresas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\F_Configuracao.resx">
+      <DependentUpon>F_Configuracao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\F_Login.resx">
       <DependentUpon>F_Login.cs</DependentUpon>
@@ -439,6 +461,18 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\icons8-configurações-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\icons8-lupa-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\icons8-bust-in-silhouette-100.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

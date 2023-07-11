@@ -43,11 +43,34 @@ namespace Lanchonete.Class
                         File.Delete(arquivo);
                     }
                 }
+                ////
+                ///fazer ele pegar sem ter um diretorio
+                ///
+               /* else
+                {
+                    string[] arquivos = GetFiles("*.SQL");
+                    foreach (string arquivo in arquivos)
+                    {
+                        using (StreamReader lendo = new StreamReader(arquivo))
+                        {
+                            string linha;
+                            while ((linha = lendo.ReadLine()) != null)
+                            {
+                                Program.cx.ExecutaSql(linha);
+                            }
+                        }
+                        File.Delete(arquivo);
+                    }
+                }*/
             }
             catch (Exception erro)
             {
-               this.MsgErro = erro.Message.ToString();
+                this.MsgErro = erro.Message.ToString();
             }
+            /*finally
+            {
+                
+            }*/
         }
     }
 }

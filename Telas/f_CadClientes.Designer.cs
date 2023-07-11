@@ -29,10 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dg_cliente = new System.Windows.Forms.DataGridView();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apelido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cpfcnpj = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ie = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.endereco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.num = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bairro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cep = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bt_incluir = new System.Windows.Forms.Button();
             this.bt_alterar = new System.Windows.Forms.Button();
             this.bt_desativa = new System.Windows.Forms.Button();
@@ -80,7 +90,6 @@
             this.lb_codigo = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lb_pesq = new System.Windows.Forms.Label();
-            this.bt_pesq = new System.Windows.Forms.Button();
             this.tb_pesq = new System.Windows.Forms.TextBox();
             this.lb_pesq1 = new System.Windows.Forms.Label();
             this.lb_statuscli = new System.Windows.Forms.Label();
@@ -90,16 +99,7 @@
             this.bt_alternar = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apelido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cpfcnpj = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ie = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.endereco = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.num = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bairro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cep = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dg_cliente)).BeginInit();
             this.p_cadastrocli.SuspendLayout();
             this.gb_cadrastrocli.SuspendLayout();
@@ -108,6 +108,7 @@
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dg_cliente
@@ -119,14 +120,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dg_cliente.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dg_cliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dg_cliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dg_cliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dg_cliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
@@ -139,28 +140,98 @@
             this.bairro,
             this.cidade,
             this.cep});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dg_cliente.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dg_cliente.DefaultCellStyle = dataGridViewCellStyle5;
             this.dg_cliente.Location = new System.Drawing.Point(153, 28);
             this.dg_cliente.Name = "dg_cliente";
             this.dg_cliente.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.CornflowerBlue;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dg_cliente.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.CornflowerBlue;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dg_cliente.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dg_cliente.Size = new System.Drawing.Size(743, 403);
             this.dg_cliente.TabIndex = 0;
             this.dg_cliente.SelectionChanged += new System.EventHandler(this.dg_cliente_SelectionChanged_1);
+            // 
+            // Codigo
+            // 
+            this.Codigo.DataPropertyName = "codigo";
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            // 
+            // Nome
+            // 
+            this.Nome.DataPropertyName = "nome";
+            this.Nome.HeaderText = "Nome / Razão Social";
+            this.Nome.Name = "Nome";
+            this.Nome.ReadOnly = true;
+            // 
+            // apelido
+            // 
+            this.apelido.DataPropertyName = "apelido";
+            this.apelido.HeaderText = "Apelido / Fantasia";
+            this.apelido.Name = "apelido";
+            this.apelido.ReadOnly = true;
+            // 
+            // cpfcnpj
+            // 
+            this.cpfcnpj.DataPropertyName = "cpfcnpj";
+            this.cpfcnpj.HeaderText = "CPF / CNPJ";
+            this.cpfcnpj.Name = "cpfcnpj";
+            this.cpfcnpj.ReadOnly = true;
+            // 
+            // ie
+            // 
+            this.ie.DataPropertyName = "rg";
+            this.ie.HeaderText = "IE / RG";
+            this.ie.Name = "ie";
+            this.ie.ReadOnly = true;
+            // 
+            // endereco
+            // 
+            this.endereco.DataPropertyName = "endereco";
+            this.endereco.HeaderText = "Endereço";
+            this.endereco.Name = "endereco";
+            this.endereco.ReadOnly = true;
+            // 
+            // num
+            // 
+            this.num.DataPropertyName = "endnum";
+            this.num.HeaderText = "Numero";
+            this.num.Name = "num";
+            this.num.ReadOnly = true;
+            // 
+            // bairro
+            // 
+            this.bairro.DataPropertyName = "bairro";
+            this.bairro.HeaderText = "Bairro";
+            this.bairro.Name = "bairro";
+            this.bairro.ReadOnly = true;
+            // 
+            // cidade
+            // 
+            this.cidade.DataPropertyName = "cidade";
+            this.cidade.HeaderText = "Cidade";
+            this.cidade.Name = "cidade";
+            this.cidade.ReadOnly = true;
+            // 
+            // cep
+            // 
+            this.cep.DataPropertyName = "cep";
+            this.cep.HeaderText = "CEP";
+            this.cep.Name = "cep";
+            this.cep.ReadOnly = true;
             // 
             // bt_incluir
             // 
@@ -187,7 +258,7 @@
             // bt_desativa
             // 
             this.bt_desativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_desativa.Location = new System.Drawing.Point(11, 153);
+            this.bt_desativa.Location = new System.Drawing.Point(11, 162);
             this.bt_desativa.Name = "bt_desativa";
             this.bt_desativa.Size = new System.Drawing.Size(105, 40);
             this.bt_desativa.TabIndex = 3;
@@ -198,7 +269,7 @@
             // bt_voltar
             // 
             this.bt_voltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_voltar.Location = new System.Drawing.Point(11, 396);
+            this.bt_voltar.Location = new System.Drawing.Point(11, 367);
             this.bt_voltar.Name = "bt_voltar";
             this.bt_voltar.Size = new System.Drawing.Size(105, 40);
             this.bt_voltar.TabIndex = 4;
@@ -210,7 +281,7 @@
             // 
             this.p_cadastrocli.Controls.Add(this.lb_status);
             this.p_cadastrocli.Controls.Add(this.gb_cadrastrocli);
-            this.p_cadastrocli.Location = new System.Drawing.Point(3, 2);
+            this.p_cadastrocli.Location = new System.Drawing.Point(707, 0);
             this.p_cadastrocli.Name = "p_cadastrocli";
             this.p_cadastrocli.Size = new System.Drawing.Size(926, 497);
             this.p_cadastrocli.TabIndex = 5;
@@ -676,8 +747,9 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.pictureBox1);
+            this.groupBox1.Controls.Add(this.p_cadastrocli);
             this.groupBox1.Controls.Add(this.lb_pesq);
-            this.groupBox1.Controls.Add(this.bt_pesq);
             this.groupBox1.Controls.Add(this.tb_pesq);
             this.groupBox1.Controls.Add(this.lb_pesq1);
             this.groupBox1.Controls.Add(this.dg_cliente);
@@ -698,17 +770,6 @@
             this.lb_pesq.Size = new System.Drawing.Size(48, 16);
             this.lb_pesq.TabIndex = 11;
             this.lb_pesq.Text = "Nome";
-            // 
-            // bt_pesq
-            // 
-            this.bt_pesq.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_pesq.Location = new System.Drawing.Point(579, 438);
-            this.bt_pesq.Name = "bt_pesq";
-            this.bt_pesq.Size = new System.Drawing.Size(47, 29);
-            this.bt_pesq.TabIndex = 10;
-            this.bt_pesq.Text = "Pesq.";
-            this.bt_pesq.UseVisualStyleBackColor = true;
-            this.bt_pesq.Click += new System.EventHandler(this.bt_pesq_Click);
             // 
             // tb_pesq
             // 
@@ -733,11 +794,11 @@
             // lb_statuscli
             // 
             this.lb_statuscli.AutoSize = true;
-            this.lb_statuscli.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_statuscli.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_statuscli.ForeColor = System.Drawing.Color.Navy;
-            this.lb_statuscli.Location = new System.Drawing.Point(633, 441);
+            this.lb_statuscli.Location = new System.Drawing.Point(644, 440);
             this.lb_statuscli.Name = "lb_statuscli";
-            this.lb_statuscli.Size = new System.Drawing.Size(190, 24);
+            this.lb_statuscli.Size = new System.Drawing.Size(211, 25);
             this.lb_statuscli.TabIndex = 6;
             this.lb_statuscli.Text = "CLIENTES ATIVOS";
             // 
@@ -760,7 +821,7 @@
             // bt_altPesq
             // 
             this.bt_altPesq.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_altPesq.Location = new System.Drawing.Point(12, 239);
+            this.bt_altPesq.Location = new System.Drawing.Point(12, 250);
             this.bt_altPesq.Name = "bt_altPesq";
             this.bt_altPesq.Size = new System.Drawing.Size(105, 40);
             this.bt_altPesq.TabIndex = 7;
@@ -771,7 +832,7 @@
             // bt_visualizar
             // 
             this.bt_visualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_visualizar.Location = new System.Drawing.Point(11, 110);
+            this.bt_visualizar.Location = new System.Drawing.Point(11, 116);
             this.bt_visualizar.Name = "bt_visualizar";
             this.bt_visualizar.Size = new System.Drawing.Size(105, 40);
             this.bt_visualizar.TabIndex = 6;
@@ -782,7 +843,7 @@
             // bt_alternar
             // 
             this.bt_alternar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_alternar.Location = new System.Drawing.Point(12, 196);
+            this.bt_alternar.Location = new System.Drawing.Point(12, 208);
             this.bt_alternar.Name = "bt_alternar";
             this.bt_alternar.Size = new System.Drawing.Size(105, 40);
             this.bt_alternar.TabIndex = 5;
@@ -798,75 +859,15 @@
             // 
             this.errorProvider2.ContainerControl = this;
             // 
-            // Codigo
+            // pictureBox1
             // 
-            this.Codigo.DataPropertyName = "codigo";
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
-            // 
-            // Nome
-            // 
-            this.Nome.DataPropertyName = "nome";
-            this.Nome.HeaderText = "Nome / Razão Social";
-            this.Nome.Name = "Nome";
-            this.Nome.ReadOnly = true;
-            // 
-            // apelido
-            // 
-            this.apelido.DataPropertyName = "apelido";
-            this.apelido.HeaderText = "Apelido / Fantasia";
-            this.apelido.Name = "apelido";
-            this.apelido.ReadOnly = true;
-            // 
-            // cpfcnpj
-            // 
-            this.cpfcnpj.DataPropertyName = "cpfcnpj";
-            this.cpfcnpj.HeaderText = "CPF / CNPJ";
-            this.cpfcnpj.Name = "cpfcnpj";
-            this.cpfcnpj.ReadOnly = true;
-            // 
-            // ie
-            // 
-            this.ie.DataPropertyName = "rg";
-            this.ie.HeaderText = "IE / RG";
-            this.ie.Name = "ie";
-            this.ie.ReadOnly = true;
-            // 
-            // endereco
-            // 
-            this.endereco.DataPropertyName = "endereco";
-            this.endereco.HeaderText = "Endereço";
-            this.endereco.Name = "endereco";
-            this.endereco.ReadOnly = true;
-            // 
-            // num
-            // 
-            this.num.DataPropertyName = "endnum";
-            this.num.HeaderText = "Numero";
-            this.num.Name = "num";
-            this.num.ReadOnly = true;
-            // 
-            // bairro
-            // 
-            this.bairro.DataPropertyName = "bairro";
-            this.bairro.HeaderText = "Bairro";
-            this.bairro.Name = "bairro";
-            this.bairro.ReadOnly = true;
-            // 
-            // cidade
-            // 
-            this.cidade.DataPropertyName = "cidade";
-            this.cidade.HeaderText = "Cidade";
-            this.cidade.Name = "cidade";
-            this.cidade.ReadOnly = true;
-            // 
-            // cep
-            // 
-            this.cep.DataPropertyName = "cep";
-            this.cep.HeaderText = "CEP";
-            this.cep.Name = "cep";
-            this.cep.ReadOnly = true;
+            this.pictureBox1.Image = global::Lanchonete.Properties.Resources.icons8_lupa_40;
+            this.pictureBox1.Location = new System.Drawing.Point(579, 437);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
             // 
             // F_CadClientes
             // 
@@ -874,7 +875,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(933, 507);
-            this.Controls.Add(this.p_cadastrocli);
             this.Controls.Add(this.bt_incluir);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -896,6 +896,7 @@
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -957,7 +958,6 @@
         private System.Windows.Forms.Button bt_visualizar;
         private System.Windows.Forms.Label lb_pesq1;
         private System.Windows.Forms.TextBox tb_pesq;
-        private System.Windows.Forms.Button bt_pesq;
         private System.Windows.Forms.Label lb_pesq;
         private System.Windows.Forms.Button bt_altPesq;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
@@ -970,5 +970,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn bairro;
         private System.Windows.Forms.DataGridViewTextBoxColumn cidade;
         private System.Windows.Forms.DataGridViewTextBoxColumn cep;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

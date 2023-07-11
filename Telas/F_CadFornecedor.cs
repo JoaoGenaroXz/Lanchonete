@@ -60,8 +60,6 @@ namespace Lanchonete.Telas
             dg_fornecedor.DataSource = fornecedor;
             dg_fornecedor.Refresh();
 
-
-
             ///Configuracao da apresentacao do DATAGRID///
 
             dg_fornecedor.DefaultCellStyle.BackColor = Color.LightSteelBlue;

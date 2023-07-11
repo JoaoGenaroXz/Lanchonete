@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.ServiceModel;
@@ -96,26 +95,6 @@ namespace Lanchonete.Telas
             p_cadastrocli.Visible = true;
             lb_status.Text = "Alterar";
             tb_codigo.Enabled = false;
-
-            bt_cep.Enabled = true;
-
-            tb_nome.Enabled = true;
-            tb_apelido.Enabled = true;
-            msk_cpfcnpj.Enabled = true;
-            tb_rg.Enabled = true;
-            tb_endereco.Enabled = true;
-            tb_numero.Enabled = true;
-            msk_cep.Enabled = true;
-            tb_bairro.Enabled = true;
-            tb_cidade.Enabled = true;
-            tb_complemento.Enabled = true;
-            tb_email.Enabled = true;
-            msk_telefone.Enabled = true;
-            msk_celular.Enabled = true;
-            msk_telefone2.Enabled = true;
-            msk_celular2.Enabled = true;
-            tb_contato.Enabled = true;
-
             Clientes clientes = new Clientes();
             codBanco = int.Parse(cellCod);
 
@@ -150,8 +129,6 @@ namespace Lanchonete.Telas
 
         private void bt_incluir_Click(object sender, EventArgs e)
         {
-            bt_confirmar.Enabled = true;
-
             tb_codigo.Text = cod.ToString().PadLeft(padraoCod, '0');
             tb_nome.Text = string.Empty;
             tb_apelido.Text = string.Empty;
@@ -284,7 +261,6 @@ namespace Lanchonete.Telas
                 ClienteDAO clienteDAO = new ClienteDAO();
                 DataTable clientes = clienteDAO.ListarAtivos();
                 dg_cliente.DataSource = clientes;
-                dg_cliente.Refresh();
 
                 cod++;
                 tb_codigo.Text = cod.ToString().PadLeft(padraoCod, '0');
@@ -420,13 +396,10 @@ namespace Lanchonete.Telas
         private void bt_alternar_Click(object sender, EventArgs e)
         {
             lb_statuscli.Text = "CLIENTES DESATIVADOS";
-            dg_cliente.DefaultCellStyle.BackColor = Color.Tomato;
 
             if (bt_desativa.Text == "Ativar")
             {
                 lb_statuscli.Text = "CLIENTES ATIVOS";
-                dg_cliente.DefaultCellStyle.BackColor = Color.LightSteelBlue;
-
                 lb_statuscli.ForeColor = Color.DarkBlue;
                 bt_desativa.Text = "Desativar";
                 bt_incluir.Visible = true;
@@ -455,27 +428,9 @@ namespace Lanchonete.Telas
             /////////////////////////////////////
 
             p_cadastrocli.Visible = true;
-            lb_status.Text = "Visualizar";
+            lb_status.Text = "Alterar";
             tb_codigo.Enabled = false;
             bt_confirmar.Visible = false;
-            bt_cep.Enabled = false;
-
-            tb_nome.Enabled = false;
-            tb_apelido.Enabled = false;
-            msk_cpfcnpj.Enabled = false;
-            tb_rg.Enabled = false;
-            tb_endereco.Enabled = false;
-            tb_numero.Enabled = false;
-            msk_cep.Enabled = false;
-            tb_bairro.Enabled = false;
-            tb_cidade.Enabled = false;
-            tb_complemento.Enabled = false;
-            tb_email.Enabled = false;
-            msk_telefone.Enabled = false;
-            msk_celular.Enabled = false;
-            msk_telefone2.Enabled = false;
-            msk_celular2.Enabled = false;
-            tb_contato.Enabled = false;
 
             Clientes clientes = new Clientes();
             codBanco = int.Parse(cellCod);
@@ -505,9 +460,24 @@ namespace Lanchonete.Telas
                 tb_complemento.Text = linhaDados["complemento"].ToString();
                 tb_contato.Text = linhaDados["contato"].ToString();
 
+                tb_nome.Enabled = false;
+                tb_apelido.Enabled = false;
+                msk_cpfcnpj.Enabled = false;
+                tb_rg.Enabled = false;
+                tb_endereco.Enabled = false;
+                tb_numero.Enabled = false;
+                msk_cep.Enabled = false;
+                tb_bairro.Enabled = false;
+                tb_cidade.Enabled = false;
+                tb_complemento.Enabled = false;
+                tb_email.Enabled = false;
+                msk_telefone.Enabled = false;
+                msk_celular.Enabled = false;
+                msk_telefone2.Enabled = false;
+                msk_celular2.Enabled = false;
+                tb_contato.Enabled = false;
             }
         }
-
         private void bt_altPesq_Click(object sender, EventArgs e)
         {
 
@@ -555,5 +525,5 @@ namespace Lanchonete.Telas
             Pesquisar(lb_pesq.Text, pesq);
         }
     }
-}
-          
+
+}         

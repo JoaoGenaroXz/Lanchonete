@@ -14,7 +14,7 @@ namespace Lanchonete
   static class Program
   {
 
-       public static Conexao cx = new Conexao("localhost", "5432", "Lanchonete", "postgres", "root");
+       public static Conexao cx = new Conexao("localhost", "5433", "Lanchonete", "postgres", "root");
 
       /// <summary>
       /// Ponto de entrada principal para o aplicativo.
@@ -28,15 +28,17 @@ namespace Lanchonete
           if (cx.testarConexao())
           {
               //criando as tabelas
-              string cmdSql = "CREATE TABLE IF NOT EXISTS usuario(codigo SERIAL PRIMARY KEY)";
+              string cmdSql = "CREATE TABLE IF NOT EXISTS usuario(codigo SERIAL PRIMARY KEY, nomeuser CHARACTER VARYING(50), senhauser CHARACTER VARYING(50) )";
               var dados = Program.cx.ExecutaSql(cmdSql);
-                
+
+              Atualizacao local = new Atualizacao();
+              local.Path = (@"E:\Atualização\");
+              local.Atualiza(local.Path);
+
               string cmdSqlS = "SELECT nomeuser FROM usuario WHERE nomeuser = 'teste'";
               var dadosS = Program.cx.ExecutaSql(cmdSqlS);
 
-              Atualizacao local = new Atualizacao();
-              local.Path = (@"D:\Atualização\");
-              local.Atualiza(local.Path);
+
 
               if (dadosS != null)
               {
