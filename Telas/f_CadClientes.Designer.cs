@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dg_cliente = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -89,12 +89,8 @@
             this.tb_codigo = new System.Windows.Forms.TextBox();
             this.lb_codigo = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lb_pesq = new System.Windows.Forms.Label();
-            this.tb_pesq = new System.Windows.Forms.TextBox();
-            this.lb_pesq1 = new System.Windows.Forms.Label();
             this.lb_statuscli = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.bt_altPesq = new System.Windows.Forms.Button();
             this.bt_visualizar = new System.Windows.Forms.Button();
             this.bt_alternar = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
@@ -120,14 +116,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dg_cliente.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dg_cliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dg_cliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dg_cliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dg_cliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
@@ -140,25 +136,25 @@
             this.bairro,
             this.cidade,
             this.cep});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dg_cliente.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dg_cliente.Location = new System.Drawing.Point(153, 28);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dg_cliente.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dg_cliente.Location = new System.Drawing.Point(162, 37);
             this.dg_cliente.Name = "dg_cliente";
             this.dg_cliente.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.CornflowerBlue;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dg_cliente.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dg_cliente.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dg_cliente.Size = new System.Drawing.Size(743, 403);
             this.dg_cliente.TabIndex = 0;
             this.dg_cliente.SelectionChanged += new System.EventHandler(this.dg_cliente_SelectionChanged_1);
@@ -173,7 +169,7 @@
             // Nome
             // 
             this.Nome.DataPropertyName = "nome";
-            this.Nome.HeaderText = "Nome / Razão Social";
+            this.Nome.HeaderText = "Nome / Razao Social";
             this.Nome.Name = "Nome";
             this.Nome.ReadOnly = true;
             // 
@@ -187,14 +183,14 @@
             // cpfcnpj
             // 
             this.cpfcnpj.DataPropertyName = "cpfcnpj";
-            this.cpfcnpj.HeaderText = "CPF / CNPJ";
+            this.cpfcnpj.HeaderText = "Cpf/Cnpj";
             this.cpfcnpj.Name = "cpfcnpj";
             this.cpfcnpj.ReadOnly = true;
             // 
             // ie
             // 
             this.ie.DataPropertyName = "rg";
-            this.ie.HeaderText = "IE / RG";
+            this.ie.HeaderText = "IE-RG";
             this.ie.Name = "ie";
             this.ie.ReadOnly = true;
             // 
@@ -281,7 +277,7 @@
             // 
             this.p_cadastrocli.Controls.Add(this.lb_status);
             this.p_cadastrocli.Controls.Add(this.gb_cadrastrocli);
-            this.p_cadastrocli.Location = new System.Drawing.Point(707, 0);
+            this.p_cadastrocli.Location = new System.Drawing.Point(0, 0);
             this.p_cadastrocli.Name = "p_cadastrocli";
             this.p_cadastrocli.Size = new System.Drawing.Size(926, 497);
             this.p_cadastrocli.TabIndex = 5;
@@ -747,12 +743,6 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Controls.Add(this.p_cadastrocli);
-            this.groupBox1.Controls.Add(this.lb_pesq);
-            this.groupBox1.Controls.Add(this.tb_pesq);
-            this.groupBox1.Controls.Add(this.lb_pesq1);
-            this.groupBox1.Controls.Add(this.dg_cliente);
             this.groupBox1.Controls.Add(this.lb_statuscli);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Location = new System.Drawing.Point(12, 10);
@@ -761,42 +751,12 @@
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             // 
-            // lb_pesq
-            // 
-            this.lb_pesq.AutoSize = true;
-            this.lb_pesq.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_pesq.Location = new System.Drawing.Point(228, 444);
-            this.lb_pesq.Name = "lb_pesq";
-            this.lb_pesq.Size = new System.Drawing.Size(48, 16);
-            this.lb_pesq.TabIndex = 11;
-            this.lb_pesq.Text = "Nome";
-            // 
-            // tb_pesq
-            // 
-            this.tb_pesq.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.tb_pesq.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tb_pesq.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_pesq.Location = new System.Drawing.Point(303, 440);
-            this.tb_pesq.Name = "tb_pesq";
-            this.tb_pesq.Size = new System.Drawing.Size(270, 24);
-            this.tb_pesq.TabIndex = 9;
-            // 
-            // lb_pesq1
-            // 
-            this.lb_pesq1.AutoSize = true;
-            this.lb_pesq1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_pesq1.Location = new System.Drawing.Point(146, 444);
-            this.lb_pesq1.Name = "lb_pesq1";
-            this.lb_pesq1.Size = new System.Drawing.Size(85, 16);
-            this.lb_pesq1.TabIndex = 7;
-            this.lb_pesq1.Text = "Pesquisar :";
-            // 
             // lb_statuscli
             // 
             this.lb_statuscli.AutoSize = true;
             this.lb_statuscli.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_statuscli.ForeColor = System.Drawing.Color.Navy;
-            this.lb_statuscli.Location = new System.Drawing.Point(644, 440);
+            this.lb_statuscli.Location = new System.Drawing.Point(583, 440);
             this.lb_statuscli.Name = "lb_statuscli";
             this.lb_statuscli.Size = new System.Drawing.Size(211, 25);
             this.lb_statuscli.TabIndex = 6;
@@ -804,7 +764,6 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.bt_altPesq);
             this.groupBox2.Controls.Add(this.bt_visualizar);
             this.groupBox2.Controls.Add(this.bt_alternar);
             this.groupBox2.Controls.Add(this.bt_alterar);
@@ -817,17 +776,6 @@
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Opções";
-            // 
-            // bt_altPesq
-            // 
-            this.bt_altPesq.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_altPesq.Location = new System.Drawing.Point(12, 250);
-            this.bt_altPesq.Name = "bt_altPesq";
-            this.bt_altPesq.Size = new System.Drawing.Size(105, 40);
-            this.bt_altPesq.TabIndex = 7;
-            this.bt_altPesq.Text = "Alt. Pesq";
-            this.bt_altPesq.UseVisualStyleBackColor = true;
-            this.bt_altPesq.Click += new System.EventHandler(this.bt_altPesq_Click);
             // 
             // bt_visualizar
             // 
@@ -953,13 +901,6 @@
         private System.Windows.Forms.Label lb_telefone2;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ErrorProvider errorProvider2;
-        private System.Windows.Forms.Label lb_statuscli;
-        private System.Windows.Forms.Button bt_alternar;
-        private System.Windows.Forms.Button bt_visualizar;
-        private System.Windows.Forms.Label lb_pesq1;
-        private System.Windows.Forms.TextBox tb_pesq;
-        private System.Windows.Forms.Label lb_pesq;
-        private System.Windows.Forms.Button bt_altPesq;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn apelido;
@@ -970,6 +911,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn bairro;
         private System.Windows.Forms.DataGridViewTextBoxColumn cidade;
         private System.Windows.Forms.DataGridViewTextBoxColumn cep;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lb_statuscli;
+        private System.Windows.Forms.Button bt_alternar;
+        private System.Windows.Forms.Button bt_visualizar;
     }
 }

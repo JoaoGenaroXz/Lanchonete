@@ -53,20 +53,20 @@ namespace Lanchonete.Telas
 
             msk_cpfcnpj.Validating += new CancelEventHandler(msk_cpfcnpj_Validating);
             msk_cep.Validating += new CancelEventHandler(msk_cep_Validating);
-
+                      
             ClienteDAO clienteDAO = new ClienteDAO();
             DataTable clientes = clienteDAO.ListarAtivos();
             dg_cliente.DataSource = clientes;
             dg_cliente.Refresh();
 
-
+            
 
             ///Configuracao da apresentacao do DATAGRID///
 
             dg_cliente.DefaultCellStyle.BackColor = Color.LightSteelBlue;
             string format = "000000000";
             dg_cliente.Columns[0].DefaultCellStyle.Format = format;
-
+            
             ////////////////////////////////////////////////////////////////////
 
             if (dg_cliente.Rows.Count > 0)
@@ -161,7 +161,7 @@ namespace Lanchonete.Telas
             {
                 DataRow linhaDados = dadosS.Rows[0];
                 codBanco = linhaDados["max_codigo"].ToString();
-                if (codBanco == "")
+                if(codBanco == "")
                 {
                     codBanco = "0";
                     cod = int.Parse(codBanco);
@@ -179,7 +179,7 @@ namespace Lanchonete.Telas
 
         private void bt_cancelar_Click(object sender, EventArgs e)
         {
-
+            
             p_cadastrocli.Visible = false;
         }
 
@@ -218,7 +218,7 @@ namespace Lanchonete.Telas
 
         private void bt_confirmar_Click(object sender, EventArgs e)
         {
-
+           
             Clientes cliente = new Clientes();
 
             cliente.Codigo = int.Parse(tb_codigo.Text);
@@ -251,7 +251,7 @@ namespace Lanchonete.Telas
                 // Caso haja, exibe uma mensagem de erro para o usuário
                 MessageBox.Show("O campo CPF/CNPJ é obrigatório. Por favor, preencha-o corretamente.", "Erro de validação", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (argsCep.Cancel)
+            else if(argsCep.Cancel)
             {
                 MessageBox.Show("O campo CEP é obrigatório. Por favor, preencha-o corretamente.", "Erro de validação", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -259,7 +259,7 @@ namespace Lanchonete.Telas
             {
                 cliente.GravaBanco();
                 ClienteDAO clienteDAO = new ClienteDAO();
-                DataTable clientes = clienteDAO.ListarAtivos();
+                DataTable clientes = clienteDAO.ListarClientes();
                 dg_cliente.DataSource = clientes;
 
                 cod++;
@@ -335,7 +335,7 @@ namespace Lanchonete.Telas
                 errorProvider2.SetError(msk_cep, "");
             }
         }
-
+        
         private void dg_cliente_SelectionChanged_1(object sender, EventArgs e)
         {
             if (dg_cliente.SelectedCells.Count == 0 && dg_cliente.Rows.Count > 0)
@@ -373,11 +373,11 @@ namespace Lanchonete.Telas
                 clientes.Desativar();
 
                 ClienteDAO clienteDAO = new ClienteDAO();
-                DataTable client = clienteDAO.ListarAtivos();
+                DataTable client = clienteDAO.ListarClientes();
                 dg_cliente.DataSource = client;
 
             }
-            else if (bt_desativa.Text == "Ativar")
+            else if(bt_desativa.Text == "Ativar")
             {
                 var dataHora = DateTime.Now;
 
@@ -404,7 +404,7 @@ namespace Lanchonete.Telas
                 bt_desativa.Text = "Desativar";
                 bt_incluir.Visible = true;
                 ClienteDAO clienteDAO = new ClienteDAO();
-                DataTable clientes = clienteDAO.ListarAtivos();
+                DataTable clientes = clienteDAO.ListarClientes();
                 dg_cliente.DataSource = clientes;
                 dg_cliente.Refresh();
             }
@@ -478,52 +478,6 @@ namespace Lanchonete.Telas
                 tb_contato.Enabled = false;
             }
         }
-        private void bt_altPesq_Click(object sender, EventArgs e)
-        {
-
-            switch (lb_pesq.Text)
-            {
-                case "Codigo":
-                    lb_pesq.Text = "Apelido";
-                    break;
-                case "Apelido":
-                    lb_pesq.Text = "Nome";
-                    break;
-                case "Nome":
-                    lb_pesq.Text = "Codigo";
-                    break;
-            }
-        }
-
-        private void Pesquisar(string tipoPesquisa, string valorPesquisa)
-        {
-            bool encontrado = false;
-            int rowIndex = 0;
-
-            foreach (DataGridViewRow row in dg_cliente.Rows)
-            {
-                string valor = row.Cells[tipoPesquisa].Value.ToString();
-                if (valor.Contains(valorPesquisa))
-                {
-                    dg_cliente.CurrentCell = row.Cells[tipoPesquisa];
-                    dg_cliente.FirstDisplayedScrollingRowIndex = rowIndex;
-                    encontrado = true;
-                    break;
-                }
-                rowIndex++;
-            }
-
-            if (!encontrado)
-            {
-                MessageBox.Show("Nenhum resultado encontrado!");
-            }
-        }
-
-        private void bt_pesq_Click(object sender, EventArgs e)
-        {
-            pesq = tb_pesq.Text;
-            Pesquisar(lb_pesq.Text, pesq);
-        }
     }
-
-}         
+}
+          
