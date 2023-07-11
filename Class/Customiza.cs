@@ -19,7 +19,7 @@ namespace Lanchonete.Class
         }
 
         // Classe personalizada do rótulo (label)
-        public class CustomLabel : Label
+        public class CustomLabel : Label 
         {
             public CustomLabel()
             {

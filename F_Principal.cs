@@ -97,7 +97,7 @@ namespace Lanchonete
         {
             Principal = new Thread(AbrirCadClientes);
             Principal.SetApartmentState(ApartmentState.STA);
-            Principal.Start();
+            Principal.Start(); 
         }
 
         private void bt_fornecedor_Click(object sender, EventArgs e)
